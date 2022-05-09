@@ -1,0 +1,51 @@
+
+#searchbar
+{
+    height: 40px;
+    width: 600px;
+    font-size: 25px;
+    border-color: #17a2b8;
+    font-size: 15px;
+}
+
+#btn_search
+{
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+#caract
+{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 40px;
+}
+.caracteristiques
+{
+    margin-top:50px;
+    background-color: rgb(233, 233, 233);
+    padding-top: 30px;
+}
+#cash,#qualite,#liv
+{
+    width: 400px;
+    height: 400px;
+}
+
+#titlecach,#titlequal,#titleliv
+{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+#txt_cach,#txt_del,#liv_txt
+{
+    margin-top: 40px;
+    text-align: justify;
+    font-size: large;
+    color: grey;
+
+}

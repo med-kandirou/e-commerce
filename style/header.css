@@ -1,0 +1,53 @@
+#logo
+{
+    width: 100px;
+    height: 80px;
+}
+
+.navbar
+{
+    background-color: white;
+    border-bottom: white;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    letter-spacing: 5px;    
+}
+.collapse .nav li a:hover
+{
+    color: #B38B59;
+}
+.collapse .nav li
+{
+    position: relative;
+    top: 40px; 
+}
+.collapse .nav li a
+{
+    color: black;
+    font-weight: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#brand
+{
+    font-size: 20px;
+    color: black;
+    letter-spacing: 3px;
+}
+#connect
+{
+    border: 1px solid #B38B59;
+    background-color:#B38B59 ;
+    color: white ;
+    border-radius: 25px;
+}
+#connect:hover
+{
+    border: 1px solid #B38B59;
+    background-color:white ;
+    color: black ;
+    border-radius: 25px;
+}
+
+
+
