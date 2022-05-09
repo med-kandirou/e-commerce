@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="style/acceuilstyle/style.css">
   <link rel="stylesheet" href="style/header.css">
   <link rel="stylesheet" href="./style/acceuilstyle/departement_style.css">
-  
-
 </head>
 <body>
 

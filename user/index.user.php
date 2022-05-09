@@ -40,7 +40,7 @@ require_once '../includes/init.inc.php';
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="bi bi-person-check-fill"></i>Compte
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="z-index: -1;">
               <a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>Profil</a>
               <a class="dropdown-item" href="#"><i class="bi bi-cart4"></i>Pannier</a>
               <div class="dropdown-divider"></div>
