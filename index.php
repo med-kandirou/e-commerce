@@ -29,7 +29,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
-            <li><a id="acceuil_link">Acceuil test git</a></li>
+            <li><a id="acceuil_link">Acceuil</a></li>
             <li><a id="homme_link" >Homme</a></li>
             <li><a id="femme_link" >Femme</a></li>
             <li><a id="enfant_link">Enfant</a></li>
