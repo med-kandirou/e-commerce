@@ -25,15 +25,30 @@ $(document).ready(function(){
 	  $("#homme_page").addClass('d-none');
 	  $("#femme_page").addClass('d-none');
 	});
-
 	$(".wish-icon i").click(function(){
 		$(this).toggleClass("fa-heart fa-heart-o");
 	});
-	//product-container
-	$(".product-container").click(function(){
-		alert('product clicked');
-	});
 
+
+	//add product to pannier
+	$(".test").click(function(){
+		$.post("includes/ajax/ajoute_pannier.php",{id:$(this).val()},
+		function (data) {
+			if(data=='connect')
+			{
+				location.replace("./sign_in.php");
+			}
+			else if(data=='succes')
+			{
+				$('.notif').removeClass('d-none');
+				setTimeout(()=>
+				{
+					$('.notif').addClass('d-none');
+				},1000); 
+			}
+		}
+		)
+	});
 
 });
 (function($) {
