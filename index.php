@@ -62,46 +62,7 @@
 
   </section>
 
-  <script>
-      //navigation between links
-      $(document).ready(function(){
-        $("#homme_link").click(function(){
-          $("#homme_page").removeClass('d-none');
-          $("#femme_page").addClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#femme_link").click(function(){
-          $("#femme_page").removeClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#acceuil_link").click(function(){
-          $("#acceuil_page").removeClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#femme_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#enfant_link").click(function(){
-          $("#enfant_page").removeClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#femme_page").addClass('d-none');
-        });
-
-          $(".wish-icon i").click(function(){
-            $(this).toggleClass("fa-heart fa-heart-o");
-          });
-          // test
-          $(".test").click(function(){
-            console.log($(this).val());
-          });
-
-
-
-      });
-    </script>
+  
 
   <!-- Footer -->
 <footer class="bg-dark text-center text-white">

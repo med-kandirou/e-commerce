@@ -35,7 +35,6 @@ function is_true_pass($email,$password)
         $_SESSION['prenom']=$row['prenom'];
         $_SESSION['email']=$row['email'];
         $_SESSION['password']=$row['password'];
-
         return $row['role'];
       }
       else
@@ -55,7 +54,7 @@ function getproduct($departement,$categorie,$icon,$color)
   $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
   if ($res->num_rows>0){
     echo '
-    <div class="container-fluid " id="product_slide">
+    <div class="container-fluid product-container" id="product_slide">
 	    <div class="row">
       <div class="col-md-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">

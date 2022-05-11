@@ -81,38 +81,9 @@ require_once '../includes/init.inc.php';
   <script>
       //navigation between links
       $(document).ready(function(){
-        $("#homme_link").click(function(){
-          $("#homme_page").removeClass('d-none');
-          $("#femme_page").addClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
+        $(".wish-icon i").click(function(){
+          $(this).toggleClass("fa-heart fa-heart-o");
         });
-        $("#femme_link").click(function(){
-          $("#femme_page").removeClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#acceuil_link").click(function(){
-          $("#acceuil_page").removeClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#femme_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#enfant_link").click(function(){
-          $("#enfant_page").removeClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#femme_page").addClass('d-none');
-        });
-
-          $(".wish-icon i").click(function(){
-            $(this).toggleClass("fa-heart fa-heart-o");
-          });
-
-
-
-
       });
     </script>
 
