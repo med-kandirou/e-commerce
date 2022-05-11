@@ -1,7 +1,7 @@
 <?php
 require_once '../includes/init.inc.php';
 
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['id_user'])) {
   header('location:../index.php');
   exit();
 }
@@ -59,7 +59,6 @@ else{
   </nav>
 
   <?php
-
   echo $_SESSION['nom'];
   echo $_SESSION['prenom'];
   echo $_SESSION['email'];

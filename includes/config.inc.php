@@ -1,4 +1,5 @@
 <?php
+
 define("nom_site","e-commerce");
 define('servername','localhost');
 define('username','root');

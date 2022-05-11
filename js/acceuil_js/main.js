@@ -33,7 +33,7 @@ $(document).ready(function(){
 	//add product to pannier
 	$(".test").click(function(){
 		$.post("includes/ajax/ajoute_pannier.php",{id:$(this).val()},
-		function (data) {
+		function (data){
 			if(data=='connect')
 			{
 				location.replace("./sign_in.php");

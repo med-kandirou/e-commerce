@@ -1,5 +1,5 @@
 <?php
-//require_once 'config.inc.php';
+require_once 'config.inc.php';
 function secure($data) 
 {
   $data = trim($data);
@@ -30,11 +30,11 @@ function is_true_pass($email,$password)
     {
       if(password_verify($password,$row["password"]))
       {
-        $_SESSION['id_user']=$row['id_user'];
-        $_SESSION['nom']=$row['nom'];
-        $_SESSION['prenom']=$row['prenom'];
-        $_SESSION['email']=$row['email'];
-        $_SESSION['password']=$row['password'];
+        $_SESSION["id_user"]=$row['id_user'];
+        $_SESSION["nom"]=$row['nom'];
+        $_SESSION["prenom"]=$row['prenom'];
+        $_SESSION["email"]=$row['email'];
+        $_SESSION["password"]=$row['password'];
         return $row['role'];
       }
       else

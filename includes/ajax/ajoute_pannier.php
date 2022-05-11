@@ -1,4 +1,5 @@
 <?php
+
 require_once '../config.inc.php';
 
 if (!isset($_SESSION['id_user'])) {
