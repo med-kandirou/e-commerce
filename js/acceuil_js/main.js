@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	//navigation between links
 	$("#homme_link").click(function(){
 	  $("#homme_page").removeClass('d-none');
@@ -40,11 +39,12 @@ $(document).ready(function(){
 			}
 			else if(data=='succes')
 			{
-				$('.notif').removeClass('d-none');
-				setTimeout(()=>
-				{
-					$('.notif').addClass('d-none');
-				},1000); 
+				alert('bien ajouter');
+				// $('.notif').removeClass('d-none');
+				// setTimeout(()=>
+				// {
+				// 	$('.notif').addClass('d-none');
+				// },1000); 
 			}
 		}
 		)
