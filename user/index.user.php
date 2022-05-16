@@ -1,11 +1,5 @@
 <?php
 require_once '../includes/init.inc.php';
-
-if (!isset($_SESSION['id_user'])) {
-  header('location:../index.php');
-  exit();
-}
-else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +11,7 @@ else{
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../style/acceuilstyle/style.css">
   <link rel="stylesheet" href="../style/header.css">
   <link rel="stylesheet" href="../style/acceuilstyle/departement_style.css">
@@ -46,7 +40,7 @@ else{
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="bi bi-person-check-fill"></i>Compte
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="z-index: -1;">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>Profil</a>
               <a class="dropdown-item" href="#"><i class="bi bi-cart4"></i>Pannier</a>
               <div class="dropdown-divider"></div>
@@ -63,7 +57,9 @@ else{
   echo $_SESSION['prenom'];
   echo $_SESSION['email'];
   echo $_SESSION['password'];
+
   ?>
+
   <section id="container-fluid" >
     <div id="acceuil_page">
       <?php
@@ -88,24 +84,45 @@ else{
 
   </section>
 
-<div class="notif d-none">
-  <div class="alert alert-success alert-dismissible">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Success!</strong> Produits bien ajouté au pannier !!
-  </div>
-</div>
+  <script>
+      //navigation between links
+      $(document).ready(function(){
+        $("#homme_link").click(function(){
+          $("#homme_page").removeClass('d-none');
+          $("#femme_page").addClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#femme_link").click(function(){
+          $("#femme_page").removeClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#acceuil_link").click(function(){
+          $("#acceuil_page").removeClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#femme_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#enfant_link").click(function(){
+          $("#enfant_page").removeClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#femme_page").addClass('d-none');
+        });
+
+          $(".wish-icon i").click(function(){
+            $(this).toggleClass("fa-heart fa-heart-o");
+          });
 
 
 
 
 
 
-
-
-
-
-
-
+      });
+    </script>
 
   <!-- Footer -->
 <footer class="bg-dark text-center text-white">
@@ -286,7 +303,7 @@ else{
     <script src="../js/acceuil_js/main.js"></script>
 </html>
 
-<?php }?>
+
 
 
   

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +8,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style/acceuilstyle/style.css">
   <link rel="stylesheet" href="style/header.css">
   <link rel="stylesheet" href="./style/acceuilstyle/departement_style.css">
+  
+
 </head>
 <body>
 
@@ -28,7 +29,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
-            <li><a id="acceuil_link">Acceuil</a></li>
+            <li><a id="acceuil_link" >Acceuil</a></li>
             <li><a id="homme_link" >Homme</a></li>
             <li><a id="femme_link" >Femme</a></li>
             <li><a id="enfant_link">Enfant</a></li>
@@ -63,7 +64,46 @@
 
   </section>
 
-  
+  <script>
+      //navigation between links
+      $(document).ready(function(){
+        $("#homme_link").click(function(){
+          $("#homme_page").removeClass('d-none');
+          $("#femme_page").addClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#femme_link").click(function(){
+          $("#femme_page").removeClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#acceuil_link").click(function(){
+          $("#acceuil_page").removeClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#femme_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#enfant_link").click(function(){
+          $("#enfant_page").removeClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#femme_page").addClass('d-none');
+        });
+
+          $(".wish-icon i").click(function(){
+            $(this).toggleClass("fa-heart fa-heart-o");
+          });
+          // test
+          $(".test").click(function(){
+            console.log($(this).val());
+          });
+
+
+
+      });
+    </script>
 
   <!-- Footer -->
 <footer class="bg-dark text-center text-white">

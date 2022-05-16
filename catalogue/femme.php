@@ -1,6 +1,5 @@
-<?php 
-require_once './includes/init.inc.php';
-?>
+
+
 
 <div class="container"> 
     <div class="row">
@@ -9,10 +8,15 @@ require_once './includes/init.inc.php';
 </div>
 
 
+
+
 <?php 
+require_once './includes/init.inc.php';
 
 getproduct('femme','Montre','<i class="bi bi-watch"></i>','#FF4B3E');
 getproduct('femme','Pontalon','<i class="bi bi-watch"></i>','#CC2936');
+
+
 
 ?>
                                		

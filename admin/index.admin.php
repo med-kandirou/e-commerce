@@ -1,11 +1,5 @@
 <?php
-
 require_once '../includes/init.inc.php';
-if (!isset($_SESSION['id_user'])) {
-  header('location:../index.php');
-  exit();
-}
-else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +11,7 @@ else{
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../style/acceuilstyle/style.css">
   <link rel="stylesheet" href="../style/header.css">
   <link rel="stylesheet" href="../style/acceuilstyle/departement_style.css">
@@ -83,6 +77,44 @@ else{
     </div>
 
   </section>
+
+  <script>
+      //navigation between links
+      $(document).ready(function(){
+        $("#homme_link").click(function(){
+          $("#homme_page").removeClass('d-none');
+          $("#femme_page").addClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#femme_link").click(function(){
+          $("#femme_page").removeClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#acceuil_link").click(function(){
+          $("#acceuil_page").removeClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#femme_page").addClass('d-none');
+          $("#enfant_page").addClass('d-none');
+        });
+        $("#enfant_link").click(function(){
+          $("#enfant_page").removeClass('d-none');
+          $("#acceuil_page").addClass('d-none');
+          $("#homme_page").addClass('d-none');
+          $("#femme_page").addClass('d-none');
+        });
+
+          $(".wish-icon i").click(function(){
+            $(this).toggleClass("fa-heart fa-heart-o");
+          });
+
+
+
+
+      });
+    </script>
 
   <!-- Footer -->
 <footer class="bg-dark text-center text-white">
@@ -262,8 +294,6 @@ else{
     <script src="../js/acceuil_js/owl.carousel.min.js"></script>
     <script src="../js/acceuil_js/main.js"></script>
 </html>
-
-<?php } ?>
 
 
 
