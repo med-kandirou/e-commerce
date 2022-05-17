@@ -31,13 +31,9 @@ $(document).ready(function(){
 
 	//add product to pannier
 	$(".add-pannier").click(function(){
-		$.post("./includes/ajax/ajoute_pannier.php",{id:$(this).val()},
+		$.post("../includes/ajax/ajoute_pannier.php",{id:$(this).val()},
 		function (data){
-			if(data=='connect')
-			{
-				location.href='./sign_in.php';
-			}
-			else if(data=='succes')
+			if(data=='succes')
 			{
 				alert('bien ajouter');
 			}

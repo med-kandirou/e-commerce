@@ -3,15 +3,20 @@ require_once '../init.inc.php';
 
 if (!isset($_SESSION['id_user'])) 
 {
-    echo 'connect';
+    $id_product=secure($_POST["id"]);
+    if ($conn->query("INSERT INTO `pannier`(`id_user`,`id_prod`)VALUES(".$_SESSION['id_user'].",".$id_product.")")===true) 
+    {
+        echo 'succes';
+    }
 }
 else
 {
-    $id_product=secure($_POST["id"]);
-    $conn->query("INSERT INTO `pannier`(`id_user`, `id_prod`)VALUES(".$_SESSION['id_user'].",".$id_product.")");
-    echo 'succes';
-        
+    header('location:./sign_in.php');
+    exit();
 }
+
+
+
 
 
 
