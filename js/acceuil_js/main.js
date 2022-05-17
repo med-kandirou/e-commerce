@@ -33,14 +33,13 @@ $(document).ready(function(){
 	$(".add-pannier").click(function(){
 		$.post("./includes/ajax/ajoute_pannier.php",{id:$(this).val()},
 		function (data){
-			var dataResult = JSON.parse(data);
-			if(dataResult==0)
+			if(data=='connect')
 			{
 				location.href='./sign_in.php';
 			}
-			else if(dataResult==1)
+			else if(data=='succes')
 			{
-				alert('bien aajouter');
+				alert('bien ajouter');
 			}
 		}
 		).fail(function(){alert("fail a bro")});
