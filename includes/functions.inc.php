@@ -1,5 +1,6 @@
 <?php
-//require_once 'config.inc.php';
+require_once 'init.inc.php';
+
 function secure($data) 
 {
   $data = trim($data);
@@ -77,7 +78,7 @@ function getproduct($departement,$categorie,$icon,$color)
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
           <p class="item-price"><b>'.$row['prix'].'$</b></p>
-          <button value='.$row['id_produit'].' class="btn btn-primary test">ajouter au pannier</button></br>
+          <button value='.$row['id_produit'].' class="btn btn-primary add-pannier">ajouter au pannier</button></br>
           '.$row['quantité_stock'].' articles restants</br>
           <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
         </div>						

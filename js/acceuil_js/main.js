@@ -27,28 +27,20 @@ $(document).ready(function(){
 	$(".wish-icon i").click(function(){
 		$(this).toggleClass("fa-heart fa-heart-o");
 	});
-	//add product to pannier
-	$(".test").click(function(){
-		$.post("./includes/ajax/ajoute_pannier.php",{id:$('.test').val()},
-		function (data){
-			if(data=='connect')
-			{
-				location.replace("./sign_in.php");
-			}
-			else 
-			{
-				$.post("includes/ajax/ajoute_pannier.php",{id:$('.test').val()},
-				function (data)
-				{
-					alert('bien ajouter');
-				})
 
-				
-				// $('.notif').removeClass('d-none');
-				// setTimeout(()=>
-				// {
-				// 	$('.notif').addClass('d-none');
-				// },1000); 
+
+	//add product to pannier
+	$(".add-pannier").click(function(){
+		$.post("./includes/ajax/ajoute_pannier.php",{id:$(this).val()},
+		function (data){
+			var dataResult = JSON.parse(data);
+			if(dataResult==0)
+			{
+				location.href='./sign_in.php';
+			}
+			else if(dataResult==1)
+			{
+				alert('bien aajouter');
 			}
 		}
 		).fail(function(){alert("fail a bro")});
