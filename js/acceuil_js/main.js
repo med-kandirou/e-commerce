@@ -27,19 +27,23 @@ $(document).ready(function(){
 	$(".wish-icon i").click(function(){
 		$(this).toggleClass("fa-heart fa-heart-o");
 	});
-
-
 	//add product to pannier
 	$(".test").click(function(){
-		$.post("includes/ajax/ajoute_pannier.php",{id:$(this).val()},
+		$.post("./includes/ajax/ajoute_pannier.php",{id:$('.test').val()},
 		function (data){
 			if(data=='connect')
 			{
 				location.replace("./sign_in.php");
 			}
-			else if(data=='succes')
+			else 
 			{
-				alert('bien ajouter');
+				$.post("includes/ajax/ajoute_pannier.php",{id:$('.test').val()},
+				function (data)
+				{
+					alert('bien ajouter');
+				})
+
+				
 				// $('.notif').removeClass('d-none');
 				// setTimeout(()=>
 				// {
@@ -47,7 +51,7 @@ $(document).ready(function(){
 				// },1000); 
 			}
 		}
-		)
+		).fail(function(){alert("fail a bro")});
 	});
 
 });
@@ -55,12 +59,10 @@ $(document).ready(function(){
 
 	"use strict";
 	var fullHeight = function() {
-
 		$('.js-fullheight').css('height', $(window).height());
 		$(window).resize(function(){
 			$('.js-fullheight').css('height', $(window).height());
 		});
-
 	};
 	fullHeight();
 

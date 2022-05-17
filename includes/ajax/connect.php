@@ -1,6 +1,7 @@
 <?php
 
 require_once '../init.inc.php';
+
 $email=secure($_POST['email']);
 $pass=secure($_POST['pass']);
 
