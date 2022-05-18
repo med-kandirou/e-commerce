@@ -81,7 +81,6 @@ $(document).ready(function(){
             var email = $('#email').val();
 		    var password = $('#pass').val();
 		    if(email!="" && password!=""){
-
                 $.post("includes/ajax/connect.php",{email:$('#email').val(),pass:$('#pass').val()},
                 function (data) {
                     if(data=='1')

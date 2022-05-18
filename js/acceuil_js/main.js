@@ -40,16 +40,43 @@ $(document).ready(function(){
 		function (data){
 			if(data=='succes')
 			{
+				//container
+				var container=document.createElement('div');
+				container.classList.add('container');
+				container.setAttribute('id','msg-ajoute');
+				//div
 				var div=document.createElement('div');
-				div.attr("class");
-				div.classList.add('alert', 'alert-info','alert-dismissible','fade in');
+				div.classList.add('alert','alert-info','alert-dismissible');
+				//a
 				var a=document.createElement('a');
 				a.href="#";
-				a.attr('class','close');
-				a.attr('data-dismiss','alert');
-				a.attr('aria-label','close');
-				let textNode = document.createTextNode('&times;')
-				a.appendChild(textNode);
+				a.setAttribute("class","close");
+				a.setAttribute('data-dismiss','alert');
+				a.setAttribute('aria-label','close');
+				a.innerHTML='&times;';
+				//strong
+				var strong=document.createElement('strong');
+				strong.innerText='Succès!';
+				//span
+				var span=document.createElement('span');
+				span.innerText=' Produit bien ajouté';
+				//append children
+				container.appendChild(div);
+				div.appendChild(a);
+				div.appendChild(strong);
+				div.appendChild(span);
+				div.style.width='300px';
+				div.style.height='80px';
+				div.style.padding='30px';
+				div.style.position='fixed';
+				div.style.bottom='0px';
+				div.style.right='10px';
+				document.body.appendChild(container);  
+				setTimeout(()=>
+                {
+					$('#msg-ajoute').hide();
+                },2000); 
+				
 
 			}
 		}
