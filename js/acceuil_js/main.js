@@ -29,16 +29,31 @@ $(document).ready(function(){
 	});
 
 
+	//redirect to sign_in
+	$(".add-pannier1").click(function(){
+		window.location.href = "./sign_in.php";
+	});
+
 	//add product to pannier
-	$(".add-pannier").click(function(){
+	$(".add-pannier2").click(function(){
 		$.post("../includes/ajax/ajoute_pannier.php",{id:$(this).val()},
 		function (data){
 			if(data=='succes')
 			{
-				alert('bien ajouter');
+				var div=document.createElement('div');
+				div.attr("class");
+				div.classList.add('alert', 'alert-info','alert-dismissible','fade in');
+				var a=document.createElement('a');
+				a.href="#";
+				a.attr('class','close');
+				a.attr('data-dismiss','alert');
+				a.attr('aria-label','close');
+				let textNode = document.createTextNode('&times;')
+				a.appendChild(textNode);
+
 			}
 		}
-		).fail(function(){alert("fail a bro")});
+		)
 	});
 
 });

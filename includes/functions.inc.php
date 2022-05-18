@@ -50,7 +50,9 @@ function is_true_pass($email,$password)
     return false;
   }
 }
-function getproduct($departement,$categorie,$icon,$color)
+
+//function for get product for anonyme user
+function getproduct_anonyme($departement,$categorie,$icon,$color)
 {
   $conn=new mysqli(servername,username,password,dbname); 
   $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
@@ -78,7 +80,51 @@ function getproduct($departement,$categorie,$icon,$color)
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
           <p class="item-price"><b>'.$row['prix'].'$</b></p>
-          <button type="button" value='.$row['id_produit'].' class="btn btn-primary add-pannier">ajouter au pannier</button></br>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-primary add-pannier1">ajouter au pannier</button></br>
+          '.$row['quantité_stock'].' articles restants</br>
+          <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
+        </div>						
+      </div></br>	
+    </div>';
+  }
+  echo '</div>		
+		</div>	
+	</div>
+</div>
+</div></div>
+</div>';
+}
+}
+//function for get product for user connected
+function getproduct_user($departement,$categorie,$icon,$color)
+{
+  $conn=new mysqli(servername,username,password,dbname); 
+  $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
+  if ($res->num_rows>0){
+    echo '
+    <div class="container-fluid " id="product_slide">
+	    <div class="row">
+      <div class="col-md-12">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+        <div class="carousel-inner">
+          <div class="item carousel-item active">
+          <div class="w3-bar w3-border w3-light-grey header" style="background-color:'.$color.';" >
+          '.$icon.'
+          <b>'.$categorie.'</b>
+        </div></br>
+            <div class="row">';
+    while($row = $res->fetch_assoc()) 
+    {
+      echo '<div class="col-sm-3">
+      <div class="thumb-wrapper">
+        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+        <div class="img-box">
+          <img src="./image_site/'.$row['image'].'" class="img-fluid" alt="">									
+        </div>
+        <div class="thumb-content">
+          <h4>'.$row['nom_prod'].'</h4>									
+          <p class="item-price"><b>'.$row['prix'].'$</b></p>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-primary add-pannier2">ajouter au pannier</button></br>
           '.$row['quantité_stock'].' articles restants</br>
           <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
         </div>						
