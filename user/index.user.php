@@ -48,7 +48,7 @@ else{
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>Profil</a>
-              <a class="dropdown-item" href="#"><i class="bi bi-cart4"></i>Pannier</a>
+              <a class="dropdown-item" id="pannier_link_user" href="#"><i class="bi bi-cart4"></i>Pannier</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="../log_out.php"><i class="bi bi-door-open-fill"></i>Log out</a>
             </div>
@@ -57,14 +57,6 @@ else{
       </div>
     </div>
   </nav>
-
-  <?php
-  echo $_SESSION['nom'];
-  echo $_SESSION['prenom'];
-  echo $_SESSION['email'];
-  echo $_SESSION['password'];
-
-  ?>
 
   <section id="container-fluid" >
     <div id="acceuil_page">
@@ -87,48 +79,14 @@ else{
       require_once 'enfant.user.php';
       ?>
     </div>
+    <div id="mon_pannier" class="d-none">
+      <?php
+      require_once '../catalogue/mon_pannier.php';
+      ?>
+    </div>
 
   </section>
 
-  <script>
-      //navigation between links
-      $(document).ready(function(){
-        $("#homme_link").click(function(){
-          $("#homme_page").removeClass('d-none');
-          $("#femme_page").addClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#femme_link").click(function(){
-          $("#femme_page").removeClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#acceuil_link").click(function(){
-          $("#acceuil_page").removeClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#femme_page").addClass('d-none');
-          $("#enfant_page").addClass('d-none');
-        });
-        $("#enfant_link").click(function(){
-          $("#enfant_page").removeClass('d-none');
-          $("#acceuil_page").addClass('d-none');
-          $("#homme_page").addClass('d-none');
-          $("#femme_page").addClass('d-none');
-        });
-
-          $(".wish-icon i").click(function(){
-            $(this).toggleClass("fa-heart fa-heart-o");
-          });
-
-
-
-
-
-
-      });
-    </script>
 
   <!-- Footer -->
 <footer class="bg-dark text-center text-white">

@@ -140,6 +140,48 @@ function getproduct_user($departement,$categorie,$icon,$color)
 }
 }
 
+function mes_produits($id_user)
+{
+  $conn=new mysqli(servername,username,password,dbname); 
+  $res=$conn->query("SELECT pr.id_produit, pr.nom_prod,pr.prix, pr.quantité_stock ,pr.image
+  from produit pr ,pannier p,user u where pr.id_produit=p.id_prod and p.id_user=".$id_user.";"); 
+  if ($res->num_rows>0){
+    echo '
+    <div class="container-fluid " id="product_slide">
+	    <div class="row">
+      <div class="col-md-12">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+        <div class="carousel-inner">
+          <div class="item carousel-item active">
+            <div class="row">';
+    while($row = $res->fetch_assoc()) 
+    {
+      echo '<div class="col-sm-3">
+      <div class="thumb-wrapper">
+        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+        <div class="img-box">
+          <img src="./image_site/'.$row['image'].'" class="img-fluid" alt="">									
+        </div>
+        <div class="thumb-content">
+          <h4>'.$row['nom_prod'].'</h4>									
+          <p class="item-price"><b>'.$row['prix'].'$</b></p>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-primary ">Acheter</button></br>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-danger ">Supprimer</button></br>
+          '.$row['quantité_stock'].' articles restants</br>
+          <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
+        </div>						
+      </div></br>	
+    </div>';
+  }
+  echo '</div>		
+		</div>	
+	</div>
+</div>
+</div></div>
+</div>';
+}
+}
+
 
 
 ?>

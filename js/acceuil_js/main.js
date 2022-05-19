@@ -24,6 +24,20 @@ $(document).ready(function(){
 	  $("#homme_page").addClass('d-none');
 	  $("#femme_page").addClass('d-none');
 	});
+	$("#pannier_link_admin").click(function(){
+		$("#mon_pannier").removeClass('d-none');
+		$("#enfant_page").addClass('d-none');
+		$("#acceuil_page").addClass('d-none');
+		$("#homme_page").addClass('d-none');
+		$("#femme_page").addClass('d-none');
+	  });
+	  $("#pannier_link_user").click(function(){
+		$("#mon_pannier").removeClass('d-none');
+		$("#enfant_page").addClass('d-none');
+		$("#acceuil_page").addClass('d-none');
+		$("#homme_page").addClass('d-none');
+		$("#femme_page").addClass('d-none');
+	  });
 	$(".wish-icon i").click(function(){
 		$(this).toggleClass("fa-heart fa-heart-o");
 	});
@@ -75,8 +89,50 @@ $(document).ready(function(){
 				setTimeout(()=>
                 {
 					$('#msg-ajoute').hide();
+					let e = document.getElementById("msg-ajoute");
+					document.body.removeChild(e);
                 },2000); 
-				
+			
+			}
+			else if(data='exist')
+			{
+				var container=document.createElement('div');
+				container.classList.add('container');
+				container.setAttribute('id','msg-fail');
+				//div
+				var div=document.createElement('div');
+				div.classList.add('alert','alert-warning','alert-dismissible');
+				//a
+				var a=document.createElement('a');
+				a.href="#";
+				a.setAttribute("class","close");
+				a.setAttribute('data-dismiss','alert');
+				a.setAttribute('aria-label','close');
+				a.innerHTML='&times;';
+				//strong
+				var strong=document.createElement('strong');
+				strong.innerText='Failed!';
+				//span
+				var span=document.createElement('span');
+				span.innerText=' Produit déja exist';
+				//append children
+				container.appendChild(div);
+				div.appendChild(a);
+				div.appendChild(strong);
+				div.appendChild(span);
+				div.style.width='300px';
+				div.style.height='80px';
+				div.style.padding='30px';
+				div.style.position='fixed';
+				div.style.bottom='0px';
+				div.style.right='10px';
+				document.body.appendChild(container);  
+				setTimeout(()=>
+                {
+					$('#msg-fail').hide();
+					let e = document.getElementById("msg-fail");
+					document.body.removeChild(e);
+                },2000); 
 
 			}
 		}

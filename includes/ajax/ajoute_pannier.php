@@ -1,11 +1,23 @@
 <?php
 require_once '../init.inc.php';
 
+$res='';
 $id_product=secure($_POST["id"]);
-if ($conn->query("INSERT INTO `pannier`(`id_user`,`id_prod`)VALUES(".$_SESSION['id_user'].",".$id_product.")")===true) 
+
+$result = $conn->query("SELECT * FROM `pannier` WHERE `id_user`=".$_SESSION['id_user']." and `id_prod`=".$id_product."");
+if ($result->num_rows>0) 
 {
-    echo 'succes';
+    $res='exist';
 }
+else
+{
+    $conn->query("INSERT INTO `pannier`(`id_user`,`id_prod`)VALUES(".$_SESSION['id_user'].",".$id_product.")");
+    $res='succes';
+}
+echo $res;
+
+
+
 
 
 
