@@ -38,6 +38,16 @@ $(document).ready(function(){
 		$("#homme_page").addClass('d-none');
 		$("#femme_page").addClass('d-none');
 	  });
+	  $("#add_produit").click(function(){
+		$("#produit").removeClass('d-none');
+		$("#mon_pannier").addClass('d-none');
+		$("#enfant_page").addClass('d-none');
+		$("#acceuil_page").addClass('d-none');
+		$("#homme_page").addClass('d-none');
+		$("#femme_page").addClass('d-none');
+	  });
+
+
 	$(".wish-icon i").click(function(){
 		$(this).toggleClass("fa-heart fa-heart-o");
 	});
