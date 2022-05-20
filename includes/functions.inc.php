@@ -11,7 +11,7 @@ function secure($data)
 
 function exist_Email($email)
 {
-  $conn=new mysqli(servername,username,password,dbname);  
+  global $conn;
   $sql = "select * from user where email='".$email."'";
   $res=$conn->query($sql) ;
   if ($res->num_rows > 0) {
@@ -54,7 +54,7 @@ function is_true_pass($email,$password)
 //function for get product for anonyme user
 function getproduct_anonyme($departement,$categorie,$icon,$color)
 {
-  $conn=new mysqli(servername,username,password,dbname); 
+  global $conn;
   $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
   if ($res->num_rows>0){
     echo '
@@ -98,7 +98,7 @@ function getproduct_anonyme($departement,$categorie,$icon,$color)
 //function for get product for user connected
 function getproduct_user($departement,$categorie,$icon,$color)
 {
-  $conn=new mysqli(servername,username,password,dbname); 
+  global $conn;
   $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
   if ($res->num_rows>0){
     echo '
@@ -142,9 +142,8 @@ function getproduct_user($departement,$categorie,$icon,$color)
 
 function mes_produits($id_user)
 {
-  $conn=new mysqli(servername,username,password,dbname); 
-  $res=$conn->query("SELECT pr.id_produit, pr.nom_prod,pr.prix, pr.quantité_stock ,pr.image
-  from produit pr ,pannier p,user u where pr.id_produit=p.id_prod and p.id_user=".$id_user.";"); 
+  global $conn;
+  $res=$conn->query("SELECT pr.id_produit, pr.nom_prod,pr.prix, pr.quantité_stock ,pr.image from produit pr ,pannier p where pr.id_produit=p.id_prod and pr.id_produit in (SELECT id_prod from pannier where id_user=".$id_user.");"); 
   if ($res->num_rows>0){
     echo '
     <div class="container-fluid " id="product_slide">

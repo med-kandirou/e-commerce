@@ -49,6 +49,7 @@ else{
               <a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>Profil</a>
               <a class="dropdown-item" id="pannier_link_admin" href="#"><i class="bi bi-cart4"></i>Pannier</a>
               <a class="dropdown-item" href="#"><i class="bi bi-shop"></i>Produits</a>
+              <a class="dropdown-item" href="#"><i class="bi bi-shop"></i>les commandes</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="../log_out.php"><i class="bi bi-door-open-fill"></i>Log out</a>
             </div>
