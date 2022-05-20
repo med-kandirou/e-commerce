@@ -139,6 +139,24 @@ $(document).ready(function(){
 		)
 	});
 
+    //supprimer produit
+	$('.supprimer').click(function () { 
+		$.post("../includes/ajax/supp_prod_pannier.php",{id:$(this).val()},
+		function(data){
+			if(data=='success')
+			{
+				alert('supprimer');
+			}
+		})
+		
+		
+	});
+
+
+
+
+
+
 });
 (function($) {
 

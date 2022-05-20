@@ -119,7 +119,7 @@ function getproduct_user($departement,$categorie,$icon,$color)
       <div class="thumb-wrapper">
         <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
         <div class="img-box">
-          <img src="./image_site/'.$row['image'].'" class="img-fluid" alt="">									
+          <img src="../image_site/'.$row['image'].'" class="img-fluid" alt="">									
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
@@ -159,13 +159,13 @@ function mes_produits($id_user)
       <div class="thumb-wrapper">
         <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
         <div class="img-box">
-          <img src="./image_site/'.$row['image'].'" class="img-fluid" alt="">									
+          <img src="../image_site/'.$row['image'].'" class="img-fluid" alt="">									
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
           <p class="item-price"><b>'.$row['prix'].'$</b></p>
-          <button type="button" value='.$row['id_produit'].' class="btn btn-primary ">Acheter</button></br>
-          <button type="button" value='.$row['id_produit'].' class="btn btn-danger ">Supprimer</button></br>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter">Acheter</button></br>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-danger supprimer">Supprimer</button></br>
           '.$row['quantité_stock'].' articles restants</br>
           <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
         </div>						
@@ -178,6 +178,10 @@ function mes_produits($id_user)
 </div>
 </div></div>
 </div>';
+}
+else
+{
+  echo'<img id="empty_card" src="../image_site/empty-cart.png">';
 }
 }
 

@@ -23,7 +23,6 @@ else{
   
 </head>
 <body>
-
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 60px;" >
     <div class="container-fluid " style="display: inline-block;">
       <div class="navbar-header">
