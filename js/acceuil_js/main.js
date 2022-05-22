@@ -52,6 +52,14 @@ $(document).ready(function(){
 		$(this).toggleClass("fa-heart fa-heart-o");
 	});
 
+	//add product in store
+	var file;
+	$("#file_name").change(function (e) { 
+		file=e.target.files[0].name;
+		console.log(file);
+	});
+	
+
 
 	//redirect to sign_in
 	$(".add-pannier1").click(function(){

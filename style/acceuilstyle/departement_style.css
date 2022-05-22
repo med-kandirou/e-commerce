@@ -172,7 +172,7 @@ b
   .background {
 	display: flex;
 	min-height: 100vh;
-	padding-bottom: 200px;
+	padding-bottom: 250px;
   }
   
   .conteneur {
@@ -313,6 +313,12 @@ b
   
   .app-form-control::placeholder {
 	color: #666;
+  }
+
+  #select_departement,#select_cat
+  {
+	background-color: #3e3e3e;
+	padding: 5px;
   }
   
   .app-form-control:focus {
