@@ -320,6 +320,15 @@ b
 	background-color: #3e3e3e;
 	padding: 5px;
   }
+  #feed_back
+  {
+	  border-radius: 25px;
+  }
+  #products
+  {
+	margin-bottom: 100px;
+	margin-bottom: 100px;
+  }
   
   .app-form-control:focus {
 	border-bottom-color: #ddd;

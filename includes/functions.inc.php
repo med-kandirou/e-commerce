@@ -75,7 +75,7 @@ function getproduct_anonyme($departement,$categorie,$icon,$color)
       <div class="thumb-wrapper">
         <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
         <div class="img-box">
-          <img src="./image_site/'.$row['image'].'" class="img-fluid" alt="">									
+          <img src="./image_prod/'.$row['image'].'" class="img-fluid" alt="">									
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
@@ -119,7 +119,7 @@ function getproduct_user($departement,$categorie,$icon,$color)
       <div class="thumb-wrapper">
         <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
         <div class="img-box">
-          <img src="../image_site/'.$row['image'].'" class="img-fluid" alt="">									
+          <img src="../image_prod/'.$row['image'].'" class="img-fluid" alt="">									
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
@@ -159,7 +159,7 @@ function mes_produits($id_user)
       <div class="thumb-wrapper">
         <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
         <div class="img-box">
-          <img src="../image_site/'.$row['image'].'" class="img-fluid" alt="">									
+          <img src="../image_prod/'.$row['image'].'" class="img-fluid" alt="">									
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
@@ -182,6 +182,47 @@ function mes_produits($id_user)
 else
 {
   echo'<img id="empty_card" src="../image_site/empty-cart.png">';
+}
+}
+
+function tous_produits()
+{
+  global $conn;
+  $res=$conn->query("SELECT produit.id_produit,produit.nom_prod,produit.prix,produit.quantité_stock,produit.departement,categorie.nom_cat FROM produit,categorie WHERE produit.id_cat=categorie.id_cat"); 
+  if ($res->num_rows>0){
+
+    echo'
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Quatité de stock</th>
+        <th>Departement</th>
+        <th>Catégorie</th>
+      </tr>
+    </thead>
+    <tbody>';
+    while($row = $res->fetch_assoc()) 
+    {
+      echo'
+      <tr>
+        <td>'.$row['nom_prod'].'</td>
+        <td>'.$row['prix'].'</td>
+        <td>'.$row['quantité_stock'].'</td>
+        <td>'.$row['departement'].'</td>
+        <td>'.$row['nom_cat'].'</td>
+        <td><button type="button"  value='.$row['id_produit'].' class="btn btn-danger supp_prod">Supprimer</button></td>
+      </tr>
+    ';
+
+    }
+    echo'</tbody>
+    </table>';
+}
+else
+{
+  echo '<h1> aucun produit dans le market </h1>';
 }
 }
 

@@ -8,3 +8,4 @@ if ($conn->query("DELETE FROM `pannier` WHERE id_user=".$_SESSION['id_user']." A
     echo 'success';
 }
 
+?>
