@@ -52,7 +52,7 @@ function is_true_pass($email,$password)
 }
 
 //function for get product for anonyme user
-function getproduct_anonyme($departement,$categorie,$icon,$color)
+function getproduct_anonyme($departement,$categorie,$color)
 {
   global $conn;
   $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
@@ -65,7 +65,7 @@ function getproduct_anonyme($departement,$categorie,$icon,$color)
         <div class="carousel-inner">
           <div class="item carousel-item active">
           <div class="w3-bar w3-border w3-light-grey header" style="background-color:'.$color.';" >
-          '.$icon.'
+          
           <b>'.$categorie.'</b>
         </div></br>
             <div class="row">';
@@ -96,7 +96,7 @@ function getproduct_anonyme($departement,$categorie,$icon,$color)
 }
 }
 //function for get product for user connected
-function getproduct_user($departement,$categorie,$icon,$color)
+function getproduct_user($departement,$categorie,$color)
 {
   global $conn;
   $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
@@ -109,7 +109,6 @@ function getproduct_user($departement,$categorie,$icon,$color)
         <div class="carousel-inner">
           <div class="item carousel-item active">
           <div class="w3-bar w3-border w3-light-grey header" style="background-color:'.$color.';" >
-          '.$icon.'
           <b>'.$categorie.'</b>
         </div></br>
             <div class="row">';

@@ -13,8 +13,8 @@
 <?php 
 require_once '../includes/init.inc.php';
 
-getproduct_user('femme','Montre','<i class="bi bi-watch"></i>','#FF4B3E');
-getproduct_user('femme','Pontalon','<i class="bi bi-watch"></i>','#CC2936');
+getproduct_user('femme','Montre','#FF4B3E');
+getproduct_user('femme','Pontalon','#CC2936');
 
 
 

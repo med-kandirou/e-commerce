@@ -13,8 +13,8 @@
 <?php 
 require_once './includes/init.inc.php';
 
-getproduct_anonyme('femme','Montre','<i class="bi bi-watch"></i>','#FF4B3E');
-getproduct_anonyme('femme','Pontalon','<i class="bi bi-watch"></i>','#CC2936');
+getproduct_anonyme('femme','Montre','#FF4B3E');
+getproduct_anonyme('femme','Pontalon','#CC2936');
 
 
 

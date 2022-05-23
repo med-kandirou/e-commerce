@@ -9,8 +9,8 @@
 <?php 
 require_once '../includes/init.inc.php';
 
-getproduct_user('enfant','Montre','<i class="bi bi-watch"></i>','#5EB1BF');
-getproduct_user('enfant','Pontalon','<i class="bi bi-watch"></i>','#78C0E0');
+getproduct_user('enfant','Montre','#5EB1BF');
+getproduct_user('enfant','Pontalon','#78C0E0');
 
 
 
