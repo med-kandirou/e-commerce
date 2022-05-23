@@ -215,11 +215,15 @@ $(document).ready(function(){
 		})
 		
 	});
-
-
-
-
-
+	//button acheter anonyme
+	$(".acheter1").click(function(){
+		window.location.href = "./sign_in.php";
+	});
+	
+	//button acheter user
+	$(".acheter2").click(function(){
+		window.location.href = "../catalogue/acheter.php?id="+$(this).val()+"";
+	});
 
 });
 (function($) {

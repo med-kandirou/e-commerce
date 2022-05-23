@@ -81,6 +81,7 @@ function getproduct_anonyme($departement,$categorie,$color)
           <h4>'.$row['nom_prod'].'</h4>									
           <p class="item-price"><b>'.$row['prix'].'$</b></p>
           <button type="button" value='.$row['id_produit'].' class="btn btn-primary add-pannier1">ajouter au pannier</button></br>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter1">Acheter</button></br>
           '.$row['quantité_stock'].' articles restants</br>
           <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
         </div>						
@@ -124,6 +125,7 @@ function getproduct_user($departement,$categorie,$color)
           <h4>'.$row['nom_prod'].'</h4>									
           <p class="item-price"><b>'.$row['prix'].'$</b></p>
           <button type="button" value='.$row['id_produit'].' class="btn btn-primary add-pannier2">ajouter au pannier</button></br>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter2">Acheter</button></br>
           '.$row['quantité_stock'].' articles restants</br>
           <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
         </div>						
