@@ -20,7 +20,9 @@ else{
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="../style/acceuilstyle/style.css">
   <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="../style/acceuilstyle/departement_style.css">
   <link rel="stylesheet" href="../style/acceuilstyle/footer_style.scss">
+
   
 
 </head>
