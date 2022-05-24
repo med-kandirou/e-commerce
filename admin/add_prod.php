@@ -12,6 +12,14 @@ if (isset($_POST['submit'])) {
 
 
 
+    if($file=='' || $nom=='' || $prix==''||$dep==''|| $quatite==''||$cat=='')
+    {
+        header('location:../admin/produit.admin.php?error=champ');
+        exit();
+    }
+
+
+
 $sql = "INSERT INTO `produit`(`nom_prod`, `prix`, `image`, `quantité_stock`, `departement`, `id_cat`) VALUES ('".$nom."',".$prix.",'".$file."',".$quatite.",'".$dep."',".$cat.")";
 if ($conn->query($sql) === TRUE) {
     move_uploaded_file($_FILES['file']['tmp_name'],"../image_prod/$file");

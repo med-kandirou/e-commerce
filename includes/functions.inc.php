@@ -58,7 +58,7 @@ function getproduct_anonyme($departement,$categorie,$color)
   $res=$conn->query("select p.id_produit,p.nom_prod,p.prix,p.image,p.quantité_stock,c.nom_cat from produit p ,categorie c where p.departement='".$departement."' and p.id_cat=c.id_cat and nom_cat='".$categorie."'"); 
   if ($res->num_rows>0){
     echo '
-    <div class="container-fluid " id="product_slide">
+    <div class="container-fluid" id="product_slide">
 	    <div class="row">
       <div class="col-md-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
@@ -75,7 +75,7 @@ function getproduct_anonyme($departement,$categorie,$color)
       <div class="thumb-wrapper">
         <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
         <div class="img-box">
-          <img src="./image_prod/'.$row['image'].'" class="img-fluid" alt="">									
+          <img src="../image_prod/'.$row['image'].'" class="img-fluid" alt="">									
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
@@ -193,7 +193,7 @@ function tous_produits()
   if ($res->num_rows>0){
 
     echo'
-    <table class="table table-hover">
+    <table class="table table-hover" style="font-size: 20px;">
     <thead>
       <tr>
         <th>Nom</th>
@@ -235,7 +235,7 @@ function tous_commandes()
   if ($res->num_rows>0){
 
     echo'
-    <table class="table table-hover">
+    <table class="table table-hover" style="font-size: 20px;">
     <thead>
       <tr>
         <th>Numero produit</th>
@@ -278,7 +278,7 @@ function mes_commandes($id_user)
   $res=$conn->query("SELECT `id_commande`,`id_produit`,`id_user`, `date_demmande`, `quantité`, `numero`, `adresse`, `code_postal`FROM `commande` where `id_user`=".$id_user.""); 
   if ($res->num_rows>0){
     echo'
-    <table class="table table-hover">
+    <table class="table table-hover" style="font-size: 20px;">
     <thead>
       <tr>
         <th>Numero produit</th>
@@ -304,7 +304,6 @@ function mes_commandes($id_user)
         <td><button type="button" value='.$row['id_commande'].' class="btn btn-danger delete_commande">Supprimer</button></td>
       </tr>
     ';
-
     }
     echo'</tbody>
     </table>';

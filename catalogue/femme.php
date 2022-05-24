@@ -8,8 +8,8 @@
 <?php 
 require_once '../includes/init.inc.php';
 
-getproduct_anonyme('homme','Montre','#5EB1BF');
-getproduct_anonyme('homme','Pontalon','#78C0E0');
+getproduct_anonyme('femme','Montre','#5EB1BF');
+getproduct_anonyme('femme','Pontalon','#78C0E0');
 
 
 ?>

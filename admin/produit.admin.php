@@ -1,6 +1,6 @@
 <?php require_once 'header.admin.php';
 require_once '../includes/init.inc.php'; ?>
-<div class="background">
+<div class="background" style="font-size: 20px;">
   <div class="conteneur">
     <div class="screen">
       <div class="screen-header">
@@ -64,7 +64,12 @@ require_once '../includes/init.inc.php'; ?>
         </form>
       </div>
     </div><br>
-    <div  id="feed_back"></div>
+    <div ><?php if (isset($_GET['error'])) {
+      echo'<div class="alert alert-danger" role="alert">
+            Il faut Saisir tous les champs!!
+          </div>';
+     
+    } ?></div>
   </div>
 </div>
 
