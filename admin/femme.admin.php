@@ -1,4 +1,4 @@
-
+<?php require_once 'header.admin.php'; ?>
 
 
 <div class="container"> 
@@ -17,7 +17,7 @@ getproduct_user('femme','Montre','#FF4B3E');
 getproduct_user('femme','Pontalon','#CC2936');
 
 
-
+ require_once 'footer.admin.php';
 ?>
                                		
 

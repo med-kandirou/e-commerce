@@ -1,87 +1,4 @@
 $(document).ready(function(){
-	//navigation between links
-	$("#homme_link").click(function(){
-	  $("#homme_page").removeClass('d-none');
-	  $("#femme_page").addClass('d-none');
-	  $("#acceuil_page").addClass('d-none');
-	  $("#enfant_page").addClass('d-none');
-	  $("#mon_pannier").addClass('d-none');
-	  $("#commande_admin").addClass('d-none');
-	});
-	$("#femme_link").click(function(){
-	  $("#femme_page").removeClass('d-none');
-	  $("#homme_page").addClass('d-none');
-	  $("#acceuil_page").addClass('d-none');
-	  $("#enfant_page").addClass('d-none');
-	  $("#mon_pannier").addClass('d-none');
-	  $("#commande").addClass('d-none');
-	 
-	});
-	$("#acceuil_link").click(function(){
-	  $("#acceuil_page").removeClass('d-none');
-	  $("#homme_page").addClass('d-none');
-	  $("#femme_page").addClass('d-none');
-	  $("#enfant_page").addClass('d-none');
-	  $("#mon_pannier").addClass('d-none');
-	  
-	});
-	$("#enfant_link").click(function(){
-	  $("#enfant_page").removeClass('d-none');
-	  $("#acceuil_page").addClass('d-none');
-	  $("#homme_page").addClass('d-none');
-	  $("#femme_page").addClass('d-none');
-	  $("#mon_pannier").addClass('d-none');
-	  $("#produit").addClass('d-none');
-	  $("#commande").addClass('d-none');
-	 
-	});
-	$("#pannier_link_admin").click(function(){
-		$("#mon_pannier").removeClass('d-none');
-		$("#enfant_page").addClass('d-none');
-		$("#acceuil_page").addClass('d-none');
-		$("#homme_page").addClass('d-none');
-		$("#femme_page").addClass('d-none');
-		$("#commande").addClass('d-none');
-	  });
-	  $("#pannier_link_user").click(function(){
-		$("#mon_pannier").removeClass('d-none');
-		$("#enfant_page").addClass('d-none');
-		$("#acceuil_page").addClass('d-none');
-		$("#homme_page").addClass('d-none');
-		$("#femme_page").addClass('d-none');
-		
-	  });
-	  $("#add_produit").click(function(){
-		$("#produit").removeClass('d-none');
-		$("#mon_pannier").addClass('d-none');
-		$("#enfant_page").addClass('d-none');
-		$("#acceuil_page").addClass('d-none');
-		$("#homme_page").addClass('d-none');
-		$("#femme_page").addClass('d-none');
-		$("#commande").addClass('d-none');
-	  });
-	  $("#commande_admin").click(function(){
-		$("#commande").removeClass('d-none');
-		$("#produit").addClass('d-none');
-		$("#mon_pannier").addClass('d-none');
-		$("#enfant_page").addClass('d-none');
-		$("#acceuil_page").addClass('d-none');
-		$("#homme_page").addClass('d-none');
-		$("#femme_page").addClass('d-none');
-	  });
-	  //commande.user
-	  $("#commande.user").click(function(){
-		$("#mes_commandes.user").removeClass('d-none');
-		$("#mon_pannier").addClass('d-none');
-		$("#enfant_page").addClass('d-none');
-		$("#acceuil_page").addClass('d-none');
-		$("#homme_page").addClass('d-none');
-		$("#femme_page").addClass('d-none');
-		
-	  });
-
-
-
 
 
 	$(".wish-icon i").click(function(){
@@ -90,7 +7,7 @@ $(document).ready(function(){
 
 	//redirect to sign_in
 	$(".add-pannier1").click(function(){
-		window.location.href = "./sign_in.php";
+		window.location.href = "../sign_in.php";
 	});
 
 	//add product to pannier
@@ -191,6 +108,7 @@ $(document).ready(function(){
 			if(data=='success')
 			{
 				alert('supprimer');
+				window.location = location;
 			}
 		})
 		
@@ -249,13 +167,14 @@ $(document).ready(function(){
 			if(data=='success')
 			{
 				alert('deleted');
+				window.location = location;
 			}
 		})
 		
 	});
 	//button acheter anonyme
 	$(".acheter1").click(function(){
-		window.location.href = "./sign_in.php";
+		window.location.href ="../sign_in.php";
 	});
 	
 	//button acheter user
@@ -269,10 +188,18 @@ $(document).ready(function(){
 			if(data=='success')
 			{
 				alert('La commande a été valider');
+				window.location = location;
 			}
 		})
 		
 	});
+
+
+	//acheter un produit en pannier
+	$(".acheter3").click(function(){
+		window.location.href = "../catalogue/acheter.php?id="+$(this).val()+"";
+	});
+
 
 //delete commande
 $(".delete_commande").click(function(){
@@ -281,6 +208,7 @@ $(".delete_commande").click(function(){
 		if(data=='success')
 		{
 			alert('La commande a été Supprimer');
+			window.location = location;
 		}
 	})
 	

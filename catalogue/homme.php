@@ -1,17 +1,18 @@
-
+<?php require_once 'header.cat.php'; ?>   
 <div class="container"> 
     <div class="row">
-        <img src="image_site/banner_homme.jpg" class="img-responsive" alt="banner" id="banner_home">
+        <img src="../image_site/banner_homme.jpg" class="img-responsive" alt="banner" id="banner_home">
     </div>
 
 </div>
 
 <?php 
-require_once './includes/init.inc.php';
+require_once '../includes/init.inc.php';
 
 getproduct_anonyme('homme','Montre','#5EB1BF');
 getproduct_anonyme('homme','Pontalon','#78C0E0');
 
 
 ?>
+<?php require_once 'footer.cat.php'; ?>
       

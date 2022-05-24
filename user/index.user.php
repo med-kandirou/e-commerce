@@ -6,155 +6,160 @@ if (!isset($_SESSION['id_user'])) {
   exit();
 }
 else{
+  require_once 'header.user.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Acceuil</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <link rel="stylesheet" href="../style/acceuilstyle/style.css">
-  <link rel="stylesheet" href="../style/header.css">
-  <link rel="stylesheet" href="../style/acceuilstyle/departement_style.css">
-  <link rel="stylesheet" href="../style/acceuilstyle/footer_style.scss">
-
-  
-
-</head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 60px;" >
-    <div class="container-fluid " style="display: inline-block;">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" id="brand" href="#"><img id="logo" src="../image_site/logo_site.png" alt="Logo" >Kandirou</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
-            <li><a id="acceuil_link" href="#">Acceuil</a></li>
-            <li><a id="homme_link" href="#">Homme</a></li>
-            <li><a id="femme_link" href="#">Femme</a></li>
-            <li><a id="enfant_link" href="#">Enfant</a></li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bi bi-person-check-fill"></i>Compte
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>Profil</a>
-              <a class="dropdown-item" id="pannier_link_user" href="#"><i class="bi bi-cart4"></i>Pannier</a>
-              <a class="dropdown-item" id="commande.user" href="#"><i class="bi bi-bag-check-fill"></i>Mes Commandes</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="../log_out.php"><i class="bi bi-door-open-fill"></i>Log out</a>
-            </div>
-            </li>
-          </ul>
-      </div>
-    </div>
-  </nav>
-
-  <section id="container-fluid" >
-    <div id="acceuil_page">
-      <?php
-      require_once 'acceuil.user.php';
-      ?>
-    </div>
-    <div id="femme_page" class="d-none">
-      <?php
-      require_once 'femme.user.php';
-      ?>
-    </div>
-    <div id="homme_page" class="d-none">
-      <?php
-      require_once 'homme.user.php';
-      ?>
-    </div>
-    <div id="enfant_page" class="d-none">
-      <?php
-      require_once 'enfant.user.php';
-      ?>
-    </div>
-    <div id="mon_pannier" class="d-none">
-      <?php
-      require_once '../catalogue/mon_pannier.php';
-      ?>
-    </div>
-
-    <div id="mes_commandes.user" class="d-none">
-      <?php
-      require_once 'mes_commandes.php';
-      ?>
-    </div>
-
-  </section>
 
 
- <!-- Footer -->
- <footer class="flex-rw">
-  <ul class="footer-list-top">
-    <li>
-      <h4 class="footer-list-header">About Pavilion</h4></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">PROMOS</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">BECOME A RETAILER</a></li>
-
-    <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">JOB OPENINGS</a></li>
-
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
-  </ul>
-  <ul class="footer-list-top">
-    <li>
-      <h4 class="footer-list-header">The Gift Selection</h4></li>
+<link rel="stylesheet" href="../style/acceuilstyle/owl.carousel.min.css">
+<link rel="stylesheet" href="../style/acceuilstyle/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+<link rel="stylesheet" href="../style/acceuilstyle/style.css">
+<link rel="stylesheet" href="../style/acceuilstyle/styleAcceuil2.css">
 
 
-    <li><a href='#' class="generic-anchor footer-list-anchor">ANGEL FIGURINES</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor">HOME DECOR</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor">MUGS</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor">PET LOVER</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">HANDBAGS & JEWELRY</a></li>
-  </ul>
-  <ul class="footer-list-top">
-    <li id='help'>
-      <h4 class="footer-list-header">Please Help Me</h4></li>
-    <li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
-    <li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
-    <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a></li>
-    <li id='user-registration'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a></li>
-    <li id='order-tracking'><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
-  </ul>
-  <section class="footer-social-section flex-rw">
-      <span class="footer-social-overlap footer-social-connect">
-      CONNECT <span class="footer-social-small">with</span> US
-      </span>
-      <span class="footer-social-overlap footer-social-icons-wrapper">
-      <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
-      <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-      <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-      <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
-      </span>
-  </section>
-  <section class="footer-bottom-section flex-rw">
-<div class="footer-bottom-wrapper">   
-<i class="fa fa-copyright" role="copyright">
- 
-</i> 2022 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
-    </div>
-    <div class="footer-bottom-wrapper">
-    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
-      </div>
-  </section>
-</footer>
+<div class="container-fluid" id="img-banner">
+	<div class="row">
+		<div class="col-md-7">
+			<img src="../image_site/electro.png" alt="logo" height="400px">
+		</div>
+		<div class="col-md-5" id="txts">
+			<p id="txt-exc">Exclusively availible on kandirou store</p>
+			<p id="txt-life"><b>life is short buy something</b></p>
+		</div>
+	</div>
+</div>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carousel">
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url(../image_site/work-1.jpg);"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="desc w-100">
+											<h2 class="mb-4">Define <br> Your Budget</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url(../image_site/work-2.jpg);"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4">Kids <br> Collection</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url(../image_site/work-3.jpg);"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4">Ladies <br> Collection</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work-wrap d-md-flex" >
+									<div class="img order-md-last" style="background-image: url(../image_site/work-4.jpg);"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4">Ladies <br> Collection</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
+	<h1 id="caract">Nos Caractéristiques</h1>
+		<section class="caracteristiques">
+			<div class="container">
+				<div class="row">
+						<div class="col-md-6" >
+							<img src="../image_site/qualite.png" id="qualite">
+						</div>
+						<div class="col-md-6">
+							<h3 id="titlequal">Qualité</h3>
+							<p id="txt_cach">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rerum voluptas deleniti dicta dolore magni quae amet cumque facere. Accusamus obcaecati autem, voluptatum atque quas eius magni animi sequi architecto! </p>
+						</div>
+				</div>
+				<div class="row" style="margin-top: 90px;">
+					<div class="col-md-6"  >
+						<h3 id="titlecach">Cash On delivery</h3>
+						<p id="txt_del">Le cash on delivery est un moyen de paiement proposé éventuellement dans le cadre de l'activité e-commerce et par lequel le paiement des articles commandés est réalisé auprès du livreur. Au sens strict du terme, le cash on delivery induit la réalisation d'un paiement en espèces (cash).</p>
+					</div>
+					<div class="col-md-6">
+						<img src="../image_site/cash-on-selivery.png" id="cash">
+					</div>
+				</div>
+
+				<div class="row" style="margin-top: 90px;">
+					<div class="col-md-6" >
+							<img src="../image_site/livraison.png" id="liv" >
+						</div>
+						<div class="col-md-6">
+							<h3 id="titleliv">Livraison Gratuite</h3>
+							<p id="liv_txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rerum voluptas deleniti dicta dolore magni quae amet cumque facere. Accusamus obcaecati autem, voluptatum atque quas eius magni animi sequi architecto! </p>
+						</div>
+				</div>
+
+			
+			</div>
+		</section>
 
 </body>
 
@@ -164,7 +169,8 @@ else{
     <script src="../js/acceuil_js/main.js"></script>
 </html>
 
-<?php } ?>
+<?php 
+require_once 'footer.user.php'; } ?>
 
 
 

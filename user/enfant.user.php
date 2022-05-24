@@ -1,3 +1,6 @@
+<?php
+require_once 'header.user.php';
+ ?>
 
 <div class="container"> 
     <div class="row" style="margin-top: 90px;">
@@ -13,5 +16,5 @@ getproduct_user('enfant','Montre','#5EB1BF');
 getproduct_user('enfant','Pontalon','#78C0E0');
 
 
-
+require_once 'footer.user.php';
 ?>

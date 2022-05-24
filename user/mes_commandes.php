@@ -1,5 +1,7 @@
 <?php
 require_once '../includes/init.inc.php';
+require_once 'header.user.php';
+
  ?>
 
 
@@ -9,3 +11,5 @@ require_once '../includes/init.inc.php';
   mes_commandes($_SESSION['id_user']);
   ?>
 </div>
+
+<?php require_once 'footer.user.php'; ?>

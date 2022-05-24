@@ -165,7 +165,7 @@ function mes_produits($id_user)
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
           <p class="item-price"><b>'.$row['prix'].'$</b></p>
-          <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter">Acheter</button></br>
+          <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter3">Acheter</button></br>
           <button type="button" value='.$row['id_produit'].' class="btn btn-danger supprimer">Supprimer</button></br>
           '.$row['quantité_stock'].' articles restants</br>
           <progress id="progress" value='.$row['quantité_stock'].' max="100">quantité_stock</progress></br>
@@ -231,7 +231,7 @@ else
 function tous_commandes()
 {
   global $conn;
-  $res=$conn->query("SELECT `id_commande`,`id_produit`, `date_demmande`, `quantité`, `numero`, `adresse`, `code_postal`, `is_valid` FROM `commande`"); 
+  $res=$conn->query("SELECT `id_commande`,`id_produit`, `date_demmande`, `quantité`, `numero`, `adresse`, `code_postal` FROM `commande`"); 
   if ($res->num_rows>0){
 
     echo'
@@ -248,7 +248,7 @@ function tous_commandes()
     </thead>
     <tbody>';
     while($row = $res->fetch_assoc()) 
-    {//adresse
+    {
       echo'
       <tr>
         <td>'.$row['id_produit'].'</td>
@@ -275,9 +275,8 @@ else
 function mes_commandes($id_user)
 {
   global $conn;
-  $res=$conn->query("SELECT `id_commande`,`id_produit`,`id_user`, `date_demmande`, `quantité`, `numero`, `adresse`, `code_postal`, `is_valid` FROM `commande` where `id_user`=".$id_user.""); 
+  $res=$conn->query("SELECT `id_commande`,`id_produit`,`id_user`, `date_demmande`, `quantité`, `numero`, `adresse`, `code_postal`FROM `commande` where `id_user`=".$id_user.""); 
   if ($res->num_rows>0){
-
     echo'
     <table class="table table-hover">
     <thead>
@@ -302,7 +301,7 @@ function mes_commandes($id_user)
         <td>'.$row['adresse'].'</td>
         <td>'.$row['code_postal'].'</td>
 
-        <td><button type="button" value='.$row['id_commande'].' class="btn btn-dander delete_commande">Valider</button></td>
+        <td><button type="button" value='.$row['id_commande'].' class="btn btn-danger delete_commande">Supprimer</button></td>
       </tr>
     ';
 

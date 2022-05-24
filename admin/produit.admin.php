@@ -1,4 +1,5 @@
-
+<?php require_once 'header.admin.php';
+require_once '../includes/init.inc.php'; ?>
 <div class="background">
   <div class="conteneur">
     <div class="screen">
@@ -72,10 +73,12 @@
 <div class="container" id="products">
   <h1 class="text-center">Tous les produits</h1><br>
   <?php 
+  
   tous_produits();
   ?>
 </div>
 
+<?php require_once 'footer.admin.php'; ?>
 
 
 
