@@ -13,6 +13,5 @@ getproduct_anonyme('homme','Montre','#5EB1BF');
 getproduct_anonyme('homme','Pontalon','#78C0E0');
 
 
-
 ?>
       

@@ -74,7 +74,7 @@
                                 <input type="text" class="form-control" id="tele" placeholder="ex:06......" >
                             </div>
                             <div class="form-group mb-3">
-                                <label class="label" for="adress">Adresse 1(obligatoire)</label>
+                                <label class="label" for="adress">Adresse </label>
                                 <input type="text" class="form-control" id="adress" placeholder="ex:Maroc, Casablanca" >
 
                             </div>

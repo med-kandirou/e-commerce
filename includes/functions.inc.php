@@ -228,5 +228,95 @@ else
 }
 
 
+function tous_commandes()
+{
+  global $conn;
+  $res=$conn->query("SELECT `id_commande`,`id_produit`, `date_demmande`, `quantité`, `numero`, `adresse`, `code_postal`, `is_valid` FROM `commande`"); 
+  if ($res->num_rows>0){
+
+    echo'
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Numero produit</th>
+        <th>Date</th>
+        <th>quantité</th>
+        <th>téléphone</th>
+        <th>Adresse</th>
+        <th>Code postal</th>
+      </tr>
+    </thead>
+    <tbody>';
+    while($row = $res->fetch_assoc()) 
+    {//adresse
+      echo'
+      <tr>
+        <td>'.$row['id_produit'].'</td>
+        <td>'.$row['date_demmande'].'</td>
+        <td>'.$row['quantité'].'</td>
+        <td>'.$row['numero'].'</td>
+        <td>'.$row['adresse'].'</td>
+        <td>'.$row['code_postal'].'</td>
+
+        <td><button type="button" value='.$row['id_commande'].' class="btn btn-success valider_produit">Valider</button></td>
+      </tr>
+    ';
+
+    }
+    echo'</tbody>
+    </table>';
+}
+else
+{
+  echo '<h2> aucune Commande </h2>';
+}
+}
+
+function mes_commandes($id_user)
+{
+  global $conn;
+  $res=$conn->query("SELECT `id_commande`,`id_produit`,`id_user`, `date_demmande`, `quantité`, `numero`, `adresse`, `code_postal`, `is_valid` FROM `commande` where `id_user`=".$id_user.""); 
+  if ($res->num_rows>0){
+
+    echo'
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Numero produit</th>
+        <th>Date</th>
+        <th>quantité</th>
+        <th>téléphone</th>
+        <th>Adresse</th>
+        <th>Code postal</th>
+      </tr>
+    </thead>
+    <tbody>';
+    while($row = $res->fetch_assoc()) 
+    {//adresse
+      echo'
+      <tr>
+        <td>'.$row['id_produit'].'</td>
+        <td>'.$row['date_demmande'].'</td>
+        <td>'.$row['quantité'].'</td>
+        <td>'.$row['numero'].'</td>
+        <td>'.$row['adresse'].'</td>
+        <td>'.$row['code_postal'].'</td>
+
+        <td><button type="button" value='.$row['id_commande'].' class="btn btn-dander delete_commande">Valider</button></td>
+      </tr>
+    ';
+
+    }
+    echo'</tbody>
+    </table>';
+}
+else
+{
+  echo '<h2> aucune Commande </h2>';
+}
+}
+
+
+
 
 ?>

@@ -6,6 +6,7 @@ $(document).ready(function(){
 	  $("#acceuil_page").addClass('d-none');
 	  $("#enfant_page").addClass('d-none');
 	  $("#mon_pannier").addClass('d-none');
+	  $("#commande_admin").addClass('d-none');
 	});
 	$("#femme_link").click(function(){
 	  $("#femme_page").removeClass('d-none');
@@ -13,6 +14,8 @@ $(document).ready(function(){
 	  $("#acceuil_page").addClass('d-none');
 	  $("#enfant_page").addClass('d-none');
 	  $("#mon_pannier").addClass('d-none');
+	  $("#commande").addClass('d-none');
+	 
 	});
 	$("#acceuil_link").click(function(){
 	  $("#acceuil_page").removeClass('d-none');
@@ -20,6 +23,7 @@ $(document).ready(function(){
 	  $("#femme_page").addClass('d-none');
 	  $("#enfant_page").addClass('d-none');
 	  $("#mon_pannier").addClass('d-none');
+	  
 	});
 	$("#enfant_link").click(function(){
 	  $("#enfant_page").removeClass('d-none');
@@ -28,6 +32,8 @@ $(document).ready(function(){
 	  $("#femme_page").addClass('d-none');
 	  $("#mon_pannier").addClass('d-none');
 	  $("#produit").addClass('d-none');
+	  $("#commande").addClass('d-none');
+	 
 	});
 	$("#pannier_link_admin").click(function(){
 		$("#mon_pannier").removeClass('d-none');
@@ -35,6 +41,7 @@ $(document).ready(function(){
 		$("#acceuil_page").addClass('d-none');
 		$("#homme_page").addClass('d-none');
 		$("#femme_page").addClass('d-none');
+		$("#commande").addClass('d-none');
 	  });
 	  $("#pannier_link_user").click(function(){
 		$("#mon_pannier").removeClass('d-none');
@@ -42,6 +49,7 @@ $(document).ready(function(){
 		$("#acceuil_page").addClass('d-none');
 		$("#homme_page").addClass('d-none');
 		$("#femme_page").addClass('d-none');
+		
 	  });
 	  $("#add_produit").click(function(){
 		$("#produit").removeClass('d-none');
@@ -50,7 +58,32 @@ $(document).ready(function(){
 		$("#acceuil_page").addClass('d-none');
 		$("#homme_page").addClass('d-none');
 		$("#femme_page").addClass('d-none');
+		$("#commande").addClass('d-none');
 	  });
+	  $("#commande_admin").click(function(){
+		$("#commande").removeClass('d-none');
+		$("#produit").addClass('d-none');
+		$("#mon_pannier").addClass('d-none');
+		$("#enfant_page").addClass('d-none');
+		$("#acceuil_page").addClass('d-none');
+		$("#homme_page").addClass('d-none');
+		$("#femme_page").addClass('d-none');
+	  });
+	  //commande.user
+	  $("#commande.user").click(function(){
+		$("#mes_commandes.user").removeClass('d-none');
+		$("#mon_pannier").addClass('d-none');
+		$("#enfant_page").addClass('d-none');
+		$("#acceuil_page").addClass('d-none');
+		$("#homme_page").addClass('d-none');
+		$("#femme_page").addClass('d-none');
+		
+	  });
+
+
+
+
+
 	$(".wish-icon i").click(function(){
 		$(this).toggleClass("fa-heart fa-heart-o");
 	});
@@ -229,6 +262,34 @@ $(document).ready(function(){
 	$(".acheter2").click(function(){
 		window.location.href = "../catalogue/acheter.php?id="+$(this).val()+"";
 	});
+   //valider un produit 
+	$(".valider_produit").click(function(){
+		$.post("../includes/ajax/valider_prod.php",{id:$(this).val()},
+		function(data){
+			if(data=='success')
+			{
+				alert('La commande a été valider');
+			}
+		})
+		
+	});
+
+//delete commande
+$(".delete_commande").click(function(){
+	$.post("../includes/ajax/valider_prod.php",{id:$(this).val()},
+	function(data){
+		if(data=='success')
+		{
+			alert('La commande a été Supprimer');
+		}
+	})
+	
+});
+
+
+
+
+
 
 });
 (function($) {

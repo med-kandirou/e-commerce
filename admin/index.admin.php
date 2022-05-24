@@ -40,7 +40,6 @@ else{
             <li><a id="homme_link" href="#">Homme</a></li>
             <li><a id="femme_link" href="#">Femme</a></li>
             <li><a id="enfant_link" href="#">Enfant</a></li>
-            <li><a href="#">Electronique</a></li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="bi bi-person-check-fill"></i>Compte
@@ -49,7 +48,7 @@ else{
               <a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>Profil</a>
               <a class="dropdown-item" id="pannier_link_admin" href="#"><i class="bi bi-cart4"></i>Pannier</a>
               <a class="dropdown-item" id="add_produit"><i class="bi bi-shop"></i>Produits</a>
-              <a class="dropdown-item" href="#"><i class="bi bi-bag-check-fill"></i>Les commandes</a>
+              <a class="dropdown-item" id="commande_admin" href="#"><i class="bi bi-bag-check-fill"></i>Les commandes</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="../log_out.php"><i class="bi bi-door-open-fill"></i>Log out</a>
             </div>
@@ -89,6 +88,11 @@ else{
     <div id="produit" class="d-none">
       <?php
       require_once 'produit.admin.php';
+      ?>
+    </div>
+    <div id="commande" class="d-none">
+      <?php
+      require_once 'commande.admin.php';
       ?>
     </div>
 
