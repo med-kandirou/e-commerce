@@ -5,7 +5,6 @@ require_once '../includes/init.inc.php'; ?>
     <div class="screen">
       <div class="screen-header">
         <div class="screen-header-left">
-          
           <div class="screen-header-button maximize"></div>
           <div class="screen-header-button minimize"></div>
         </div>
@@ -22,26 +21,24 @@ require_once '../includes/init.inc.php'; ?>
             <span>PRODUIT</span>
           </div>
         </div>
+        <form action="add_prod.php" method="POST" enctype="multipart/form-data">
         <div class="screen-body-item">
           <div class="app-form">
             <div class="app-form-group">
-              <input type="file" id="file_name" accept=".png, .jpg, .jpeg">
+              <input type="file" name="file" id="file" accept=".png, .jpg, .jpeg">
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" type="text" id="nom" placeholder="Nom">
+              <input class="app-form-control" type="text" id="nom" name="nom" placeholder="Nom">
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" type="number" id="prix" placeholder="Prix">
+              <input class="app-form-control" type="number" id="prix" name="prix" placeholder="Prix">
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" type="text" id="desc" placeholder="Description">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" type="number" id="quantite" placeholder="Quantité">
+              <input class="app-form-control" type="number" id="quantite" name="quantite" placeholder="Quantité">
             </div>
             <div class="app-form-group">
               <label for="select_departement">Departement :</label>
-              <select  id="select_departement">
+              <select  id="select_departement" name="dep">
               <option selected="selected" value="">--Selectionner--</option>
                 <option value="homme">HOMME</option>
                 <option value="femme">FEMME</option>
@@ -51,7 +48,7 @@ require_once '../includes/init.inc.php'; ?>
             </div>
             <div class="app-form-group">
               <label for="select_cat">Catégorie :</label>
-              <select  id="select_cat">
+              <select  id="select_cat" name="cat">
               <option selected="selected" value=''>--Selectionner--</option>
                 <option value="2">T-shirt</option>
                 <option value="3">Pontalon</option>
@@ -60,10 +57,11 @@ require_once '../includes/init.inc.php'; ?>
               </select>
             </div>
             <div class="app-form-group buttons">
-              <button class="app-form-button" id="add_product">AJOUTER</button>
+              <button class="app-form-button" type="submit" name="submit" id="add_product">AJOUTER</button>
             </div>
           </div>
         </div>
+        </form>
       </div>
     </div><br>
     <div  id="feed_back"></div>
