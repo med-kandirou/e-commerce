@@ -24,7 +24,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" id="brand" href="#"><img id="logo" src="../image_site/logo_site.png" alt="Logo" >Kandirou</a>
+        <a class="navbar-brand" id="brand" href="index.admin.php"><img id="logo" src="../image_site/logo_site.png" alt="Logo" >Kandirou</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
