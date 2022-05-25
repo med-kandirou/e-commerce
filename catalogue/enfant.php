@@ -12,6 +12,8 @@ require_once '../includes/init.inc.php';
 
 getproduct_anonyme('enfant','Montre','#5EB1BF');
 getproduct_anonyme('enfant','Pontalon','#78C0E0');
+getproduct_anonyme('enfant','T-shirt','#78C0E0');
+
 
 
 ?>

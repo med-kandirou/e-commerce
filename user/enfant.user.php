@@ -14,6 +14,7 @@ require_once '../includes/init.inc.php';
 
 getproduct_user('enfant','Montre','#5EB1BF');
 getproduct_user('enfant','Pontalon','#78C0E0');
+getproduct_user('enfant','T-shirt','#78C0E0');
 
 
 require_once 'footer.user.php';

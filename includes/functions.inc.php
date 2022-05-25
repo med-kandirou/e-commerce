@@ -79,7 +79,7 @@ function getproduct_anonyme($departement,$categorie,$color)
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
-          <p class="item-price"><b>'.$row['prix'].'$</b></p>
+          <p class="item-price"><b>'.$row['prix'].'MAD</b></p>
           <button type="button" value='.$row['id_produit'].' class="btn btn-primary add-pannier1">ajouter au pannier</button></br>
           <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter1">Acheter</button></br>
           '.$row['quantité_stock'].' articles restants</br>
@@ -123,7 +123,7 @@ function getproduct_user($departement,$categorie,$color)
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
-          <p class="item-price"><b>'.$row['prix'].'$</b></p>
+          <p class="item-price"><b>'.$row['prix'].'MAD</b></p>
           <button type="button" value='.$row['id_produit'].' class="btn btn-primary add-pannier2">ajouter au pannier</button></br>
           <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter2">Acheter</button></br>
           '.$row['quantité_stock'].' articles restants</br>
@@ -164,7 +164,7 @@ function mes_produits($id_user)
         </div>
         <div class="thumb-content">
           <h4>'.$row['nom_prod'].'</h4>									
-          <p class="item-price"><b>'.$row['prix'].'$</b></p>
+          <p class="item-price"><b>'.$row['prix'].'MAD</b></p>
           <button type="button" value='.$row['id_produit'].' class="btn btn-primary acheter3">Acheter</button></br>
           <button type="button" value='.$row['id_produit'].' class="btn btn-danger supprimer">Supprimer</button></br>
           '.$row['quantité_stock'].' articles restants</br>
@@ -189,13 +189,14 @@ else
 function tous_produits()
 {
   global $conn;
-  $res=$conn->query("SELECT produit.id_produit,produit.nom_prod,produit.prix,produit.quantité_stock,produit.departement,categorie.nom_cat FROM produit,categorie WHERE produit.id_cat=categorie.id_cat"); 
+  $res=$conn->query("SELECT produit.id_produit,produit.nom_prod,produit.prix,produit.image,produit.quantité_stock,produit.departement,categorie.nom_cat FROM produit,categorie WHERE produit.id_cat=categorie.id_cat"); 
   if ($res->num_rows>0){
 
     echo'
     <table class="table table-hover" style="font-size: 20px;">
     <thead>
       <tr>
+        <th>Image</th>
         <th>Nom</th>
         <th>Prix</th>
         <th>Quatité de stock</th>
@@ -208,6 +209,7 @@ function tous_produits()
     {
       echo'
       <tr>
+      <td style="height:40px;width:40px;"><img src="../image_prod/'.$row['image'].'" class="img-fluid"></td>
         <td>'.$row['nom_prod'].'</td>
         <td>'.$row['prix'].'</td>
         <td>'.$row['quantité_stock'].'</td>
