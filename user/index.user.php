@@ -6,7 +6,14 @@ if (!isset($_SESSION['id_user'])) {
   exit();
 }
 else{
-  require_once 'header.user.php';
+	if ($_SESSION['role']==2) {
+		header('location:../404.html');
+		exit();
+	}
+	else
+	{
+		require_once 'header.user.php';
+
 ?>
 
 
@@ -170,7 +177,9 @@ else{
 </html>
 
 <?php 
-require_once 'footer.user.php'; } ?>
+require_once 'footer.user.php';
+ }
+ } ?>
 
 
 

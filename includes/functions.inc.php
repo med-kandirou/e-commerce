@@ -36,6 +36,8 @@ function is_true_pass($email,$password)
         $_SESSION['prenom']=$row['prenom'];
         $_SESSION['email']=$row['email'];
         $_SESSION['password']=$row['password'];
+        $_SESSION['role']=$row['role'];
+
 
         return $row['role'];
       }

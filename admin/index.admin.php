@@ -5,7 +5,14 @@ if (!isset($_SESSION['id_user'])) {
   exit();
 }
 else{
-  require_once 'header.admin.php';
+	if ($_SESSION['role']==1) {
+		header('location:../404.html');
+		exit();
+	}
+	else
+	{
+		require_once 'header.admin.php';
+	
 ?>
 
 <link rel="stylesheet" href="../style/acceuilstyle/owl.carousel.min.css">
@@ -158,7 +165,7 @@ else{
 			
 			</div>
 		</section>
-<?php } require_once 'footer.admin.php';?>
+<?php  require_once 'footer.admin.php'; }}?>
 
   
   
