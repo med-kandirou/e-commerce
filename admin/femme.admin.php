@@ -13,9 +13,10 @@
 <?php 
 require_once '../includes/init.inc.php';
 
-getproduct_user('femme','Montre','#FF4B3E');
-getproduct_user('femme','Pontalon','#CC2936');
 
+for ($i=0; $i < count($cat); $i++) { 
+    getproduct_user('femme',$cat[$i],'#CC2936');
+}
 
  require_once 'footer.admin.php';
 ?>

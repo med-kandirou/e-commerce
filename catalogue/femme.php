@@ -8,8 +8,10 @@
 <?php 
 require_once '../includes/init.inc.php';
 
-getproduct_anonyme('femme','Montre','#5EB1BF');
-getproduct_anonyme('femme','Pontalon','#78C0E0');
+for ($i=0; $i < count($cat); $i++) { 
+    getproduct_anonyme('femme',$cat[$i],'#5EB1BF');
+}
+
 
 
 ?>

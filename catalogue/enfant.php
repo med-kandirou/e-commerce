@@ -10,9 +10,10 @@
 <?php 
 require_once '../includes/init.inc.php';
 
-getproduct_anonyme('enfant','Montre','#5EB1BF');
-getproduct_anonyme('enfant','Pontalon','#78C0E0');
-getproduct_anonyme('enfant','T-shirt','#78C0E0');
+for ($i=0; $i < count($cat); $i++) { 
+    getproduct_anonyme('enfant',$cat[$i],'#5EB1BF');
+}
+
 
 
 

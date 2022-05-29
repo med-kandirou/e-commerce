@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
 $sql = "INSERT INTO `produit`(`nom_prod`, `prix`, `image`, `quantité_stock`, `departement`, `id_cat`) VALUES ('".$nom."',".$prix.",'".$file."',".$quatite.",'".$dep."',".$cat.")";
 if ($conn->query($sql) === TRUE) {
     move_uploaded_file($_FILES['file']['tmp_name'],"../image_prod/$file");
+    echo'<script>alert("Produit bien ajouté")</script>';
     header('location:../admin/produit.admin.php');
     exit();
 } else {

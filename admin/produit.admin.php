@@ -43,18 +43,25 @@ require_once '../includes/init.inc.php'; ?>
                 <option value="homme">HOMME</option>
                 <option value="femme">FEMME</option>
                 <option value="enfant">ENFANT</option>
-                <option value="electronique">ELECTRONIQUE</option>
+                <!-- <option value="electronique">ELECTRONIQUE</option> -->
               </select>
             </div>
             <div class="app-form-group">
               <label for="select_cat">Catégorie :</label>
-              <select  id="select_cat" name="cat">
-              <option selected="selected" value=''>--Selectionner--</option>
-                <option value="2">T-shirt</option>
-                <option value="3">Pontalon</option>
-                <option value="4">Chaussures</option>
-                <option value="5">Montre</option>
-              </select>
+                <?php
+                $res=$conn->query("select * from categorie"); 
+                if ($res->num_rows>0) {
+
+                  echo'<select id="select_cat" name="cat">';
+                  echo '<option selected="selected" value="">--Selectionner--</option>';
+                  while($row = $res->fetch_assoc()) 
+                  {
+                    echo ' <option value='.$row['id_cat'].'>'.$row['nom_cat'].'</option>';
+                  }
+                  echo' </select>';
+                }
+
+                ?>
             </div>
             <div class="app-form-group buttons">
               <button class="app-form-button" type="submit" name="submit" id="add_product">AJOUTER</button>

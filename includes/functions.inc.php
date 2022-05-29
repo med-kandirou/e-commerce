@@ -1,6 +1,21 @@
 <?php
 require_once 'init.inc.php';
 
+
+
+//stocker les categorie dand un array
+$cat = array();
+$res=$conn->query("select * from categorie"); 
+if ($res->num_rows>0){
+  while($row = $res->fetch_assoc()) 
+  {
+    array_push($cat,$row['nom_cat']);
+  }
+}
+//genereate random color
+
+
+//
 function secure($data) 
 {
   $data = trim($data);
