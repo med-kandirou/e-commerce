@@ -4,17 +4,13 @@
     if(isset($_GET['id']))
     {
         $id=$_GET['id'];
-        $img='';
         $nom='';
         $prix=0;
-        $quantité=0;
-        $result=$conn->query("SELECT `id_produit`, `nom_prod`, `prix`,`image`, `quantité_stock` FROM `produit` WHERE `id_produit`=".$id."");
+        $result=$conn->query('SELECT `nom_prod`,`prix` FROM `produit` WHERE `id_produit`='.$id.'');
         if ($result->num_rows>0) {
             while($row = $result->fetch_assoc()) {
-            $img=$row["image"];
             $nom=$row["nom_prod"];
             $prix=$row["prix"];
-            $quantité=$row["quantité_stock"];
             }
         } 
     }
@@ -32,8 +28,6 @@
 
 	</head>
 	<body>
-
-
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -43,10 +37,6 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-12 col-lg-10">
-					<div class="wrap d-md-flex">
-						<div class="img" style="background-image: url('<?php echo '../image_prod/'.$img.'';?>');">
-			      </div>
-                  
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
 			      		<div class="w-100">
@@ -55,24 +45,20 @@
 								
 			      	</div>
 						<form  class="signin-form">
-                        <div class="form-group mb-3">
-                                <label class="label" for="id">Numero de produit</label>
-                                <input type="text" class="form-control" id="id" value="<?php echo $id ?>" disabled >
-                            </div>
                             <div class="form-group mb-3">
                                 <label class="label" >Nom Produits</label>
                                 <input type="text" class="form-control" value="<?php echo $nom ?>" disabled >
                             </div>
                             <div class="form-group mb-3">
-                                <label class="label" >Prix</label>
-                                <input type="text" class="form-control" value="<?php echo $prix ?>" disabled >
+                                <label class="label" >Prix Unitaire</label>
+                                <input type="text" class="form-control" id="prix" value="<?php echo $prix.' MAD' ?>" disabled >
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" >Téléphone</label>
                                 <input type="text" class="form-control" id="tele" placeholder="ex:06......" >
                             </div>
                             <div class="form-group mb-3">
-                                <label class="label" for="adress">Adresse </label>
+                                <label class="label" for="adress">Adresse</label>
                                 <input type="text" class="form-control" id="adress" placeholder="ex:Maroc, Casablanca" >
 
                             </div>
@@ -85,7 +71,7 @@
                                 <input type="number" class="form-control" id="code" placeholder="ex:35 000">
                             </div>
                             <div class="form-group">
-                                <button type="button" class="form-control btn btn-primary rounded submit px-3" id="btn_acheter">Acheter</button>
+                                <button type="button" class="form-control btn btn-primary rounded submit px-3" value="<?php echo $id ?>" id="btn_acheter">Acheter</button>
                             </div>
 							<div class="alert alert-success" id="alert-achete" role="alert">
   								Produit acheté avec succés !
@@ -93,7 +79,12 @@
                             <div class="alert alert-danger" id="alert-champ-vide" role="alert">
   								Il faut saisir tous les champs
 							</div>
+                            <div id="total_prix">
+                                
+
+                            </div>
 		                </form>
+                        
 		        </div>
 		      </div>
 				</div>

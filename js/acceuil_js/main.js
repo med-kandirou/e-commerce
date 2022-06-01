@@ -100,7 +100,6 @@ $(document).ready(function(){
 		}
 		)
 	});
-
     //supprimer produit de pannier
 	$('.supprimer').click(function () { 
 		$.post("../includes/ajax/supp_prod_pannier.php",{id:$(this).val()},
@@ -120,45 +119,7 @@ $(document).ready(function(){
 		file=e.target.files[0].name;
 	});
 
-	//add_product
-	// $("#feed_back").hide();
-	// $("#add_product").click(function () { 
-	// 	var nom=$('#nom').val();
-	// 	var prix=$('#prix').val();
-	// 	var desc=$('#desc').val();
-	// 	var dep=$('#select_departement').val();
-	// 	var cat=$('#select_cat').val();
-	// 	var quantite=$('#quantite').val();
-	// 	if (file=='' || nom=='' ||prix==''|| desc=='' || quantite=='' || dep=='' || cat=='') {
-	// 		$("#feed_back").show();
-	// 		$("#feed_back").removeClass('alert, alert-success');
-	// 		$("#feed_back").addClass('alert  alert-danger');
-	// 		$("#feed_back").text('Il faut saisir tous les champs');
-	// 	}
-	// 	else
-	// 	{
-	// 		$.post("../includes/ajax/add_product.php",{file:file,nom:nom,prix:prix,desc:desc,quatite:quantite,dep:dep,cat:cat},
-	// 		function(data){
-	// 			if(data=='added')
-	// 			{
-	// 				$("#feed_back").show();
-	// 				$("#feed_back").removeClass('alert, alert-danger');
-	// 				$("#feed_back").addClass('alert , alert-success');
-	// 				$("#feed_back").text('Produit Ajouté');
-	// 				//vider les champs
-	// 				$('#nom').val('');
-	// 				$('#prix').val('');
-	// 				$('#desc').val('');
-	// 				$('#select_departement').val('');
-	// 				$('#select_cat').val('');
-	// 				$('#quantite').val('');
-	// 				file='';
-
-	// 			}
-	// 		})
-	// 	}
 	
-	// });
 	//supprimer un produit
 	$('.supp_prod').click(function () { 
 		$.post("../includes/ajax/supp_produit.php",{id:$(this).val()},
@@ -178,7 +139,7 @@ $(document).ready(function(){
 	
 	//button acheter user
 	$(".acheter2").click(function(){
-		window.location.href = "../catalogue/acheter.php?id="+$(this).val()+"";
+		window.location.href = "../catalogue/details.php?id="+$(this).val()+"";
 	});
    //valider un produit 
 	$(".valider_produit").click(function(){
@@ -196,7 +157,7 @@ $(document).ready(function(){
 
 	//acheter un produit en pannier
 	$(".acheter3").click(function(){
-		window.location.href = "../catalogue/acheter.php?id="+$(this).val()+"";
+		window.location.href = "../catalogue/details.php?id="+$(this).val()+"";
 	});
 
 
@@ -212,6 +173,12 @@ $(".delete_commande").click(function(){
 	})
 	
 });
+
+$('#poursuivre').click(function () { 
+	
+	
+});
+
 
 
 

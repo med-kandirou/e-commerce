@@ -12,10 +12,9 @@ if ($res->num_rows>0){
     array_push($cat,$row['nom_cat']);
   }
 }
-//genereate random color
 
 
-//
+
 function secure($data) 
 {
   $data = trim($data);

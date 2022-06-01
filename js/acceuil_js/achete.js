@@ -1,16 +1,19 @@
 $(document).ready(function () {
+    // calculer total prix par quantité
+// $('#quantite').blur(function () { 
+//     $('#total_prix').html('<span class="label label-warning">Total :'+$('#prix').val()*$(this).val()+'</span>');
+// });
 
     $('#alert-achete').hide();
     $('#alert-champ-vide').hide();
 
     $('#btn_acheter').click(function () {
-        var id=$('#id').val();
+        var id=$('#btn_acheter').val();
         var tele=$('#tele').val();
         var quantité=$('#quantite').val();
         var adress=$('#adress').val();
         var code=$('#code').val();
-
-        if (id=='' || tele=='' || quantité==''|| adress =='' || code=='') {
+        if (tele=='' || quantité==''|| adress =='' || code=='') {
             $('#alert-champ-vide').show();
         }
         else
@@ -38,6 +41,10 @@ $(document).ready(function () {
         }
         
 
+    });
+
+    $('#poursuivre').click(function () { 
+        window.location.href = "../catalogue/acheter.php?id="+$('#poursuivre').val()+"";
     });
 
 
