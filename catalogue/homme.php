@@ -1,4 +1,7 @@
-<?php require_once 'header.cat.php'; ?>   
+<?php require_once 'header.cat.php'; ?> 
+
+
+
 <div class="container"> 
     <div class="row">
         <img src="../image_site/banner_homme.jpg" class="img-responsive" alt="banner" id="banner_home">

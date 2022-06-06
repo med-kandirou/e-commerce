@@ -41,8 +41,7 @@
 			      	<div class="d-flex">
 			      		<div class="w-100">
 			      			<h3 class="mb-4">Les informations</h3>
-			      		</div>
-								
+			      		</div>		
 			      	</div>
 						<form  class="signin-form">
                             <div class="form-group mb-3">
@@ -80,8 +79,6 @@
   								Il faut saisir tous les champs
 							</div>
                             <div id="total_prix">
-                                
-
                             </div>
 		                </form>
                         
