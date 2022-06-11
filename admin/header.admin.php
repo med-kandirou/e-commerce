@@ -1,3 +1,4 @@
+<?php require_once '../includes/init.inc.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +13,8 @@
   <link rel="stylesheet" href="../style/acceuilstyle/style.css">
   <link rel="stylesheet" href="../style/header.css">
   <link rel="stylesheet" href="../style/acceuilstyle/departement_style.css">
-  <link rel="stylesheet" href="../style/acceuilstyle/footer_style.scss">
-  
+  <!-- nav bar -->
+  <link rel="stylesheet" href="../style/acceuilstyle/footer_style.css">
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 60px;" >
@@ -24,25 +25,62 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" id="brand" href="index.admin.php"><img id="logo" src="../image_site/logo_site.png" alt="Logo" >Kandirou</a>
+        <a class="navbar-brand" id="brand" href="index.admin.php"><img id="logo" src="../image_site/logo_site.png" alt="Logo" ></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
-            <li><a href="index.admin.php">Acceuil</a></li>
-            <li><a href="homme.admin.php">Homme</a></li>
-            <li><a href="femme.admin.php">Femme</a></li>
-            <li><a href="enfant.admin.php">Enfant</a></li>
+
+          <li><a href="./index.php">Acceuil</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homme
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="affiche_prod.admin.php?dep=homme&cat=Pantallons">Pantallons</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=homme&cat=Chemises">Chemises</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=homme&cat=T-shirts">T-shirts</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=homme&cat=POLO">POLO</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Femme
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Vestes">Blazers/Vestes</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Robes">Robes</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Pyjama">Pyjama</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Pantallons">Pantallons</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Chemises">Chemises/Blouses</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=T-shirts">T-shirts</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Jupes">Jupes</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Chassures">Chassures</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Mentaux">Mentaux</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Sacs">Sacs</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Caftan">Caftan</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Jellab">Jellab</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=femme&cat=Accessoires">Accessoires</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Enfant
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item"  href="affiche_prod.admin.php?dep=enfant&cat=Garçon">Garçon</a>
+                  <a class="dropdown-item" href="affiche_prod.admin.php?dep=enfant&cat=Fille">Fille</a>
+                </div>
+            </li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bi bi-person-check-fill"></i>Compte
+            <i class="bi bi-person-check-fill"> </i> <?php echo 'Bonjour '.$_SESSION['nom']  ?>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <!-- <a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>Profil</a> -->
-              <a class="dropdown-item"  href="pannier.admin.php"><i class="bi bi-cart4"></i>Pannier</a>
+            <a class="dropdown-item" href="client.php"><i class="bi bi-people"></i>Les clients</a>
               <a class="dropdown-item" href="produit.admin.php"><i class="bi bi-shop"></i>Produits</a>
               <a class="dropdown-item" href="commande.admin.php"><i class="bi bi-bag-check-fill"></i>Les commandes</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="../log_out.php"><i class="bi bi-door-open-fill"></i>Log out</a>
+              <a class="dropdown-item" href="../log_out.php"><i class="bi bi-door-open-fill"></i>Déconnecter</a>
             </div>
             </li>
           </ul>

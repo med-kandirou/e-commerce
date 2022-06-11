@@ -1,4 +1,4 @@
-<?php require_once './header.php'; ?>
+<?php require_once 'header.php'; ?>
 
 <link rel="stylesheet" href="style/acceuilstyle/owl.carousel.min.css">
 <link rel="stylesheet" href="style/acceuilstyle/owl.theme.default.min.css">
@@ -6,15 +6,14 @@
 <link rel="stylesheet" href="style/acceuilstyle/style.css">
 <link rel="stylesheet" href="style/acceuilstyle/styleAcceuil2.css">
 
-
 <div class="container-fluid" id="img-banner">
 	<div class="row">
 		<div class="col-md-7">
 			<img src="image_site/electro.png" alt="logo" height="400px">
 		</div>
 		<div class="col-md-5" id="txts">
-			<p id="txt-exc">Exclusively availible on kandirou store</p>
-			<p id="txt-life">Life is short buy something</p>
+			<p id="txt-exc">Nos produits sont exclusive dans <span style="color: red;">EDA WEAR</span> Store</p>
+			<p id="txt-life">La vie est courte acheter quelque chose</p>
 		</div>
 	</div>
 </div>
@@ -28,7 +27,7 @@
 									<div class="img order-md-last" style="background-image: url(image_site/work-1.jpg);"></div>
 									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
 										<div class="desc w-100">
-											<h2 class="mb-4">Define <br> Your Budget</h2>
+											<h2 class="mb-4">meilleur <br> qualité</h2>
 											<p class="h5">Call: 0123 456 78901</p>
 											<p class="h5 mb-4">Email Address: email@info.com</p>
 											<div class="row justify-content-end">
@@ -38,7 +37,7 @@
 											</div>
 											<p>
 												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
-												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">voir plus</button>
 											</p>
 										</div>
 									</div>
@@ -49,7 +48,7 @@
 									<div class="img order-md-last" style="background-image: url(image_site/work-2.jpg);"></div>
 									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
 										<div class="py-md-5">
-											<h2 class="mb-4">Kids <br> Collection</h2>
+											<h2 class="mb-4">Enfant <br> Collection</h2>
 											<p class="h5">Call: 0123 456 78901</p>
 											<p class="h5 mb-4">Email Address: email@info.com</p>
 											<div class="row justify-content-end">
@@ -59,7 +58,7 @@
 											</div>
 											<p>
 												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
-												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">voir plus</button>
 											</p>
 										</div>
 									</div>
@@ -70,7 +69,7 @@
 									<div class="img order-md-last" style="background-image: url(image_site/work-3.jpg);"></div>
 									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
 										<div class="py-md-5">
-											<h2 class="mb-4">Ladies <br> Collection</h2>
+											<h2 class="mb-4">Femmes <br> Collection</h2>
 											<p class="h5">Call: 0123 456 78901</p>
 											<p class="h5 mb-4">Email Address: email@info.com</p>
 											<div class="row justify-content-end">
@@ -80,7 +79,7 @@
 											</div>
 											<p>
 												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
-												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">voir plus</button>
 											</p>
 										</div>
 									</div>
@@ -148,4 +147,4 @@
 
 			</div>
 		</section>
-		<?php require_once 'footer.php'; ?>
+<?php require_once 'footer.php'; ?>

@@ -135,9 +135,15 @@ $(document).ready(function(){
         }
         else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('#email').val())==false)
         {
-            $('#email-msg').text('Fotmat Email incorrect');
+            $('#email-msg').text('Format Email incorrect');
             $("#email-msg").removeClass('valid');
             $("#email-msg").addClass('invalid');
+        }
+        else if(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test($('#pass').val())==false)
+        {
+            $('#pass-msg').text('8 carcactère minimum:Un lettre minimum,Un nombre,Un caractére special');
+            $("#pass-msg").removeClass('valid');
+            $("#pass-msg").addClass('invalid');   
         }
         else if($('#pass').val()!=$('#Cpass').val())
         {

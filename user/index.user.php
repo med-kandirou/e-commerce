@@ -30,8 +30,8 @@ else{
 			<img src="../image_site/electro.png" alt="logo" height="400px">
 		</div>
 		<div class="col-md-5" id="txts">
-			<p id="txt-exc">Exclusively availible on kandirou store</p>
-			<p id="txt-life"><b>life is short buy something</b></p>
+			<p id="txt-exc">Nos produits sont exclusive dans <span style="color: red;">EDA WEAR</span> Store</p>
+			<p id="txt-life">La vie est courte acheter quelque chose</p>
 		</div>
 	</div>
 </div>

@@ -12,29 +12,66 @@
   <link rel="stylesheet" href="style/acceuilstyle/style.css">
   <link rel="stylesheet" href="style/header.css">
   <link rel="stylesheet" href="style/acceuilstyle/departement_style.css">
-
-  <link rel="stylesheet" href="style/acceuilstyle/footer_style.scss">
-
+  <link rel="stylesheet" href="style/acceuilstyle/footer_style.css">
 </head>
-
-<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 60px;" >
-    <div class="container-fluid " style="display: inline-block;">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" id="brand" href="./index.php"><img id="logo" src="image_site/logo_site.png" alt="Logo" >Kandirou</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
-            <li><a href="./index.php">Acceuil</a></li>
-            <li><a href="./catalogue/homme.php" >Homme</a></li>
-            <li><a href="./catalogue/femme.php" >Femme</a></li>
-            <li><a href="./catalogue/enfant.php">Enfant</a></li>
-            <li><a href="sign_in.php" id="connect">Se connecter</a></li>
-          </ul>
-      </div>
-    </div>
-  </nav>
+<body>
+    <header>
+          <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 60px;" >
+              <div class="container-fluid " style="display: inline-block;">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" id="brand" href="./index.php"><img id="logo" src="image_site/logo_site.png" alt="Logo" ></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
+                      <li><a href="./index.php">Acceil</a></li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Homme
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="affiche_prod.php?dep=homme&cat=Pantallons">Pantallons</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=homme&cat=Chemises">Chemises</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=homme&cat=T-shirts">T-shirts</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=homme&cat=POLO">POLO</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Femme
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Vestes">Blazers/Vestes</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Robes">Robes</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Pyjama">Pyjama</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Pantallons">Pantallons</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Chemises">Chemises/Blouses</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=T-shirts">T-shirts</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Jupes">Jupes</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Chaussures">Chaussures</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Mentaux">Mentaux</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Sacs">Sacs</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Caftan">Caftan</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Jellab">Jellab</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=femme&cat=Accessoires">Accessoires</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Enfant
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  href="affiche_prod.php?dep=enfant&cat=Garçon">Garçon</a>
+                            <a class="dropdown-item" href="affiche_prod.php?dep=enfant&cat=Fille">Fille</a>
+                          </div>
+                      </li>
+                      <li><a href="sign_in.php" id="connect">Se connecter</a></li>
+                    </ul>
+                </div>
+              </div>
+            </nav>
+    </header>

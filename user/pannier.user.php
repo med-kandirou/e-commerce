@@ -1,4 +1,5 @@
 <?php
+require_once '../includes/init.inc.php';
 require_once 'header.user.php';
  ?>
 
@@ -11,7 +12,7 @@ require_once 'header.user.php';
 
 <?php 
 
-require_once '../includes/init.inc.php';
+
 mes_produits($_SESSION['id_user']);
 
 require_once 'footer.user.php';

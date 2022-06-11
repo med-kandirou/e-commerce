@@ -1,12 +1,7 @@
 $(document).ready(function () {
-    // calculer total prix par quantité
-// $('#quantite').blur(function () { 
-//     $('#total_prix').html('<span class="label label-warning">Total :'+$('#prix').val()*$(this).val()+'</span>');
-// });
-
     $('#alert-achete').hide();
     $('#alert-champ-vide').hide();
-
+    
     $('#btn_acheter').click(function () {
         var id=$('#btn_acheter').val();
         var tele=$('#tele').val();
@@ -39,12 +34,9 @@ $(document).ready(function () {
             }
         })
         }
-        
-
     });
-
     $('#poursuivre').click(function () { 
-        window.location.href = "../catalogue/acheter.php?id="+$('#poursuivre').val()+"";
+        window.location.href = "../catalogue/ache.php?id="+$('#poursuivre').val()+"";
     });
 
 

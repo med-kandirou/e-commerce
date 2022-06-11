@@ -5,10 +5,16 @@ require_once '../includes/init.inc.php';
 
 
 <div class="container" style="margin-top: 130px;" >
-  <h1 class="text-center">Les commandes</h1><br>
+  <h1 class="text-center">Les commandes en attente</h1><br>
   <?php 
-  tous_commandes();
- 
+  tous_commandes_non_confirm();
+  ?>
+</div>
+
+<div class="container" style="margin-top: 130px;margin-bottom: 300px;" >
+  <h1 class="text-center"> Les commandes en cours de livraison</h1><br>
+  <?php 
+  tous_commandes_confirm();
   ?>
 </div>
 

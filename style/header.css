@@ -1,20 +1,18 @@
 #logo
 {
-    width: 100px;
-    height: 80px;
+    width: 160px;
+    height: 130px;
 }
-
 .navbar
 {
     background-color: white;
     border-bottom: white;
     padding-top: 15px;
-    padding-bottom: 10px;
-    letter-spacing: 5px;    
+    padding-bottom: 10px;   
 }
 .collapse .nav li a:hover
 {
-    color: #B38B59;
+    color: #F9C8CF;
 }
 .collapse .nav li
 {
@@ -25,8 +23,8 @@
 {
     color: black;
     font-weight: 40px;
-    font-size: 15px;
-    cursor: pointer;
+    font-size: 18px;
+    
 }
 #brand
 {
@@ -36,17 +34,34 @@
 }
 #connect
 {
-    border: 1px solid #B38B59;
-    background-color:#B38B59 ;
+    border: 1px solid #F9C8CF;
+    background-color:#F9C8CF ;
     color: white ;
     border-radius: 25px;
+    letter-spacing: 2px;
 }
 #connect:hover
 {
-    border: 1px solid #B38B59;
+    border: 1px solid #F9C8CF;
     background-color:white ;
     color: black ;
     border-radius: 25px;
 }
+#myNavbar .nav-item a
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
+#myNavbar .nav-item .dropdown-item
+{
+    width: max-content;
+    display: flex;
+}
 
+#myNavbar .nav-item .dropdown-item:hover
+{
+    width: max-content;
+    border: 1px solid #B38B59;
+    border-radius: 20px;
+}

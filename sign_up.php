@@ -61,7 +61,7 @@
                             <div class="form-group mb-3">
                                 <label class="label" for="password">Mot de passe</label>
                                 <input type="password" class="form-control" placeholder="Password" name="pass" id="pass">
-                                <div class="valid" id="pass-msg"></div>
+                                <div id="pass-msg"></div>
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="password">Confirmation</label>

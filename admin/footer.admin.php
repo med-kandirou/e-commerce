@@ -1,59 +1,47 @@
- <!-- Footer -->
- <footer class="flex-rw">
-  <ul class="footer-list-top">
-    <li>
-      <h4 class="footer-list-header">About Pavilion</h4></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">PROMOS</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">BECOME A RETAILER</a></li>
-
-    <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">JOB OPENINGS</a></li>
-
-    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
-  </ul>
-  <ul class="footer-list-top">
-    <li>
-      <h4 class="footer-list-header">The Gift Selection</h4></li>
-
-
-    <li><a href='#' class="generic-anchor footer-list-anchor">ANGEL FIGURINES</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor">HOME DECOR</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor">MUGS</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor">PET LOVER</a></li>
-    <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">HANDBAGS & JEWELRY</a></li>
-  </ul>
-  <ul class="footer-list-top">
-    <li id='help'>
-      <h4 class="footer-list-header">Please Help Me</h4></li>
-    <li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
-    <li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
-    <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a></li>
-    <li id='user-registration'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a></li>
-    <li id='order-tracking'><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
-  </ul>
-  <section class="footer-social-section flex-rw">
-      <span class="footer-social-overlap footer-social-connect">
-      CONNECT <span class="footer-social-small">with</span> US
-      </span>
-      <span class="footer-social-overlap footer-social-icons-wrapper">
-      <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
-      <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-      <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-      <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
-      </span>
-  </section>
-  <section class="footer-bottom-section flex-rw">
-<div class="footer-bottom-wrapper">   
-<i class="fa fa-copyright" role="copyright">
- 
-</i> 2022 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
-    </div>
-    <div class="footer-bottom-wrapper">
-    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>Définition</h6>
+            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a  href="affiche_prod.admin.php?dep=femme&cat=Robes">Robes</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Pyjama">Pyjama</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Pantallons">Pant</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Chemises">Chemis</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=T-shirts">T-shir</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Jupes">Jupes</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Chaussures">Chau</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Mentaux">Mentaux</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Sacs">Sacs</a>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Caftan">Caftan</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Jellab">Jellab</a></li>
+              <li><a href="affiche_prod.admin.php?dep=femme&cat=Accessoires">Accessoires</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-6 col-xs-12">
+            <h6>Contact us :</h6>
+            <ul class="social-icons" style="margin-right: 70px;">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-google"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
       </div>
-  </section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; <?php echo date ("Y");?> Tous les droits sont réservés par 
+         <a href="#">Eda Wear</a>.
+            </p>
+          </div>
+        </div>
+      </div>
 </footer>
 
 </body>

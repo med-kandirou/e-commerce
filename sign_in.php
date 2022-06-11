@@ -63,13 +63,13 @@
 					</div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+			            	<label class="checkbox-wrap checkbox-primary mb-0">enregistrer
 									  <input type="checkbox" checked>
 									  <span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
+										<a href="mailto:">Mot de passe Oublié?</a>
 									</div>
 		            </div>
 		          </form>

@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 	//redirect to sign_in
 	$(".add-pannier1").click(function(){
-		window.location.href = "../sign_in.php";
+		window.location.href = "sign_in.php";
 	});
 
 	//add product to pannier
@@ -20,6 +20,7 @@ $(document).ready(function(){
 				var container=document.createElement('div');
 				container.classList.add('container');
 				container.setAttribute('id','msg-ajoute');
+				container.style.fontSize="15px";
 				//div
 				var div=document.createElement('div');
 				div.classList.add('alert','alert-info','alert-dismissible');
@@ -61,6 +62,7 @@ $(document).ready(function(){
 				var container=document.createElement('div');
 				container.classList.add('container');
 				container.setAttribute('id','msg-fail');
+				container.style.fontSize="15px";
 				//div
 				var div=document.createElement('div');
 				div.classList.add('alert','alert-warning','alert-dismissible');
@@ -134,14 +136,15 @@ $(document).ready(function(){
 	});
 	//button acheter anonyme
 	$(".acheter1").click(function(){
-		window.location.href ="../sign_in.php";
+		window.location.href ="sign_in.php";
 	});
 	
 	//button acheter user
 	$(".acheter2").click(function(){
 		window.location.href = "../catalogue/details.php?id="+$(this).val()+"";
 	});
-   //valider un produit 
+
+   //valider un commande 
 	$(".valider_produit").click(function(){
 		$.post("../includes/ajax/valider_prod.php",{id:$(this).val()},
 		function(data){
@@ -151,19 +154,15 @@ $(document).ready(function(){
 				window.location = location;
 			}
 		})
-		
 	});
-
-
 	//acheter un produit en pannier
 	$(".acheter3").click(function(){
 		window.location.href = "../catalogue/details.php?id="+$(this).val()+"";
 	});
 
-
 //delete commande
 $(".delete_commande").click(function(){
-	$.post("../includes/ajax/valider_prod.php",{id:$(this).val()},
+	$.post("../includes/ajax/delete_commande.php",{id:$(this).val()},
 	function(data){
 		if(data=='success')
 		{
@@ -171,19 +170,27 @@ $(".delete_commande").click(function(){
 			window.location = location;
 		}
 	})
-	
 });
 
-$('#poursuivre').click(function () { 
-	
+//delete client
+$('.delete_user').click(function () { 
+	$.post("../includes/ajax/delete_user.php",{id:$(this).val()},
+	function(data){
+		if(data=='success')
+		{
+			alert('Le client a été Supprimé');
+			window.location = location;
+		}
+	})
+});
+//details_user
+$('.details_user').click(function () { 
+	$.post("../includes/ajax/details_user.php",{id:$(this).val()},
+	function(data){
+		alert(data);
+	})
 	
 });
-
-
-
-
-
-
 
 });
 (function($) {

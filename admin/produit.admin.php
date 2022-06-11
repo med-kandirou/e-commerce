@@ -1,5 +1,7 @@
-<?php require_once 'header.admin.php';
-require_once '../includes/init.inc.php'; ?>
+<?php 
+require_once '../includes/init.inc.php';
+require_once 'header.admin.php';
+ ?>
 <div class="background" style="font-size: 20px;">
   <div class="conteneur">
     <div class="screen">
@@ -31,6 +33,9 @@ require_once '../includes/init.inc.php'; ?>
               <input class="app-form-control" type="text" id="nom" name="nom" placeholder="Nom">
             </div>
             <div class="app-form-group">
+              <textarea class="app-form-control" cols="40" rows="3" id="desc" name="desc" placeholder="Description"></textarea>
+            </div>
+            <div class="app-form-group">
               <input class="app-form-control" type="number" id="prix" name="prix" placeholder="Prix">
             </div>
             <div class="app-form-group">
@@ -43,7 +48,6 @@ require_once '../includes/init.inc.php'; ?>
                 <option value="homme">HOMME</option>
                 <option value="femme">FEMME</option>
                 <option value="enfant">ENFANT</option>
-                <!-- <option value="electronique">ELECTRONIQUE</option> -->
               </select>
             </div>
             <div class="app-form-group">
@@ -75,8 +79,16 @@ require_once '../includes/init.inc.php'; ?>
       echo'<div class="alert alert-danger" role="alert">
             Il faut Saisir tous les champs!!
           </div>';
-     
-    } ?></div>
+    } 
+    if(isset($_GET['succes']))
+    {
+      echo'<div class="alert alert-success" role="alert">
+            Produit bien ajouté .
+          </div>';
+    }
+    
+    
+    ?></div>
   </div>
 </div>
 
